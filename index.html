@@ -7,50 +7,56 @@
   </head>
   <body>
     <!-- the navigation bar -->
-    <div class="nav-bar">
-      <nav>
+    <div class="nav-bar-container">
         <!-- Left part -->
-        <a href="index.html">Home</a>
-        <a href="">cat1</a>
-        <a href="">cat2</a>
-        <a href="">cat3</a>
-        <a href="#contact">Contact</a>
-        <!-- Right part -->
-        <a href="">Cart</a>
-        <div class="nav-account">
-          <button class="account">
-            account
-            <div class="dropdown-account">
-              <a href="">My Account</a>
-              <a href="">My Orders</a>
-              <a href="">Log Out</a>
-            </div>
-          </button>
+        <a class="logo" href="index.html">
+          <img src="img/SoundX-Logo.png" alt="SoundX" width="100px">
+        </a>
+        <div class="brand-container">
+          <a class="left-nav brand">Brand</a>
+          <!-- TODO: brand dropdown -->
+          <div class="brand-dropdown-content">
+            Here is something to display => brand
+          </div>
         </div>
-      </nav>
+        <div class="type-container">
+          <a class="left-nav type">Type</a>
+          <!-- TODO: type dropdown -->
+          <div class="type-dropdown-content">
+            Here is something to display => type
+          </div>
+        </div>
+        <a class="left-nav" href="html/productlist.html">Product</a>
+        <a class="left-nav" href="#contact">Contact</a>
+        <!-- Right part -->
+        <a class="right-nav" href="html/accountinfo.html">
+        <img class="account-logo" src="img/profile-user.png" alt="account"></a>
+        <a class="right-nav" href="html/cart.html">
+        <img class="cart-logo" src="img/shopping-cart.png" alt="cart" style="padding-top: 3px;"></a>
+        
     </div>
 
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides">
+    <!-- Big Banner container -->
+    <div class="top-banner-container">
+      <!-- Full-width images -->
+      <div class="banner-page">
         <img src="img/placeholder.png" style="height: 350px; width: 100%" />
-        <div class="text">Caption Text</div>
+        <div class="caption-text">Caption Text</div>
       </div>
 
-      <div class="mySlides">
+      <div class="banner-page">
         <img src="img/placeholder.png" style="height: 350px; width: 100%" />
-        <div class="text">Caption Two</div>
+        <div class="caption-text">Caption Two</div>
       </div>
 
-      <div class="mySlides">
+      <div class="banner-page">
         <img src="img/placeholder.png" style="height: 350px; width: 100%" />
-        <div class="text">Caption Three</div>
+        <div class="caption-text">Caption Three</div>
       </div>
 
       <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="next(-1)">&#10094;</a>
+      <a class="next" onclick="next(1)">&#10095;</a>
     </div>
     <br />
 
@@ -68,7 +74,7 @@
 
     <!-- Contact -->
     <div id="contact">
-      <h1>Contact Us</h1>
+      <h2>Contact Us</h1>
       <p>
         <!-- (+65) 8888 - 8888 -->
         &#40;&#43;65&#41; 8888 &#45; 8888 <br />
@@ -78,8 +84,7 @@
         Singapore, 636866 <br />
       </p>
     </div>
-
-    <p>This is home page</p>
+    
   </body>
   <script src="script.js"></script>
 </html>
