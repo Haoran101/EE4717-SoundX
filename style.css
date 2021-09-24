@@ -2,14 +2,14 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 400;
 }
 
 /* the navigation bar container */
 .nav-bar-container {
   min-height: 50px;
   border-width: 0px;
-  font-family: "Segoe UI",Arial,sans-serif;
-  font-weight: 400;
   font-size: 20px;
   display: block;
   position: sticky;
@@ -129,4 +129,23 @@ h1 {
   font-family: Calibri, sans-serif;
   letter-spacing: 1px;
   font-size: 60px;
+}
+
+/* contact part */
+#contact {
+  background-color: SlateGray;
+  text-align: left;
+  color: Azure;
+}
+
+/*contact heading*/
+#contact h2{
+  font-size: 40px;
+  padding: 20px;
+}
+
+/* remove default p padding for contact */
+#contact p{
+  padding: 0 20px 0 20px;
+  margin-bottom: 0;
 }
