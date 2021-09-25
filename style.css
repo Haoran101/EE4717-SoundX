@@ -1,0 +1,151 @@
+* {box-sizing:border-box}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 400;
+}
+
+/* the navigation bar container */
+.nav-bar-container {
+  min-height: 50px;
+  border-width: 0px;
+  font-size: 20px;
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: SlateGray;
+  text-align: center;
+  color: Azure;
+}
+
+/* Top left website logo */
+.logo{
+  float: left;
+  padding: 0 10px 0 10px;
+}
+
+/* nav part on left */
+.left-nav{
+  float: left;
+  padding: 10px 10px 0 10px;
+  min-width:40px;
+  text-decoration: none;
+  color: Azure;
+  height: 50px;
+}
+
+/* change nav text color to  */
+.left-nav:hover{
+  background-color: azure;
+  color: black;
+}
+
+/* nav part on right */
+.right-nav{
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px 10px;
+  float: right;
+  text-decoration: none;
+  color: Azure;
+}
+
+.brand-dropdown-content, .type-dropdown-content {
+  color: black;
+  top: 50px;
+  display: none;
+  position: absolute;
+  background-color:Ivory;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.brand-container:hover .brand-dropdown-content{
+  display: block;
+}
+
+.type-container:hover .type-dropdown-content{
+  display: block;
+}
+
+/* Slideshow container */
+.top-banner-container{
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* Hide the images by default */
+.banner-page {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: azure;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.caption-text {
+  color:azure;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* heading 1 style */
+h1 {
+  text-align: center;
+  font-family: Calibri, sans-serif;
+  letter-spacing: 1px;
+  font-size: 60px;
+}
+
+/* contact part */
+#contact {
+  background-color: SlateGray;
+  text-align: left;
+  color: Azure;
+}
+
+/*contact heading*/
+#contact h2{
+  font-size: 40px;
+  padding: 20px;
+}
+
+/* remove default p padding for contact */
+#contact p{
+  padding: 0 20px 0 20px;
+  margin-bottom: 0;
+}
