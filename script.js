@@ -22,3 +22,5 @@ function display(n) {
   }
   slides[pageNumber-1].style.display = "block";
 }
+
+
