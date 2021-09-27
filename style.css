@@ -14,11 +14,120 @@ body {
   display: block;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   background-color: SlateGray;
   text-align: center;
   color: Azure;
 }
+
+/*nav dropdown list item*/
+.nav-dropdown-item {
+	display: flex;
+	list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+	padding-right: 40px;
+}
+
+.subnav-item{
+	display:flex;
+	flex:0 0 20%;
+	justify-content: center;
+    align-items: center;
+	padding:30px 20px;
+}
+
+a.item-block-link{
+	text-decoration:none;
+}
+
+/* product list8*/
+.product-list{
+}
+
+.product-list-flex{
+	display:flex;
+	justify-content:center;
+	margin: 0 auto;
+}
+
+.product-list-item-block{
+	position: relative;
+    display: block;
+	width: 250px;
+    min-height: 250px;
+    margin: 0px 60px 100px 60px;
+	
+}
+
+.product-list-item-img{
+}
+
+.product-list-item-info{
+	position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none
+}
+
+.item-info-body{
+}
+
+.item-info-body-title{
+	padding: 10px 0 5px;
+	margin: 0px;
+	font-family: Gotham,Verdana,sans-serif;
+    font-style: normal;
+	font-size: 15px;
+    line-height: 15px;
+	font-weight: 800;
+}
+
+.item-info-body-type{
+	padding: 5px 0 5px;
+	margin: 0px;
+	font-family: Gotham,Verdana,sans-serif;
+    font-style: normal;
+	font-size: 15px;
+    line-height: 15px;
+	font-weight: 400;
+}
+
+.topSale-banner-container{
+	min-height: 350px;	
+	max-width: 100%;
+	min-width: 1200px;
+	position: relative;
+	margin: auto;
+}
+
+.topSale-banner-img{
+	display: block;
+    /*z-index: 0;*/
+    width: 100%;
+	height: 350px;
+	background-image:url("img/placeholder.png");
+	background-position: left;
+	background-repeat: no-repoeat;
+	background-size:cover;
+
+}
+
+.topSale-banner-text-container{
+	margin-left: 60%;
+	text-align:left;
+	position: absolute;
+    /*z-index: 10;*/
+    width: 30%;
+    top: 50%;
+	transform: translateY(-50%);
+}
+
+#topSale-title {
+	text-align:left;	
+}
+
 
 /* Top left website logo */
 .logo{
@@ -74,7 +183,8 @@ body {
 
 /* Slideshow container */
 .top-banner-container{
-  max-width: 1200px;
+  max-width: 90%;
+  min-width:1200px;
   position: relative;
   margin: auto;
   padding-top: 20px;
@@ -82,7 +192,7 @@ body {
 
 /* Hide the images by default */
 .banner-page {
-  display: none;
+  display: block;
 }
 
 /* Next & previous buttons */
