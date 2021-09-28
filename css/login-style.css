@@ -1,0 +1,128 @@
+* {box-sizing:border-box}
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-bg,.signup-bg {
+  background-image: url("../img/login-bg.jpg");
+  height:100%;
+  max-width:100%;
+  min-width: 400px;
+  min-height:500px;
+  overflow:hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.signup-bg{
+	  display:flex;
+	  justify-content:center;
+	  
+}
+
+.signup-container{
+	position: absolute;
+	display:block;
+	background-color:#ffffff70;
+	top:50%;
+	transform:translateY(-50%);
+	max-width: 500px;
+	min-width: 400px;
+	min-height: 800px;
+	overflow: hidden;
+	padding: 50px 30px;
+	
+}
+
+.sign-up-input-block{
+
+}
+
+.login-container {
+  position: absolute;
+  display:block;
+  right: 0;
+  margin-right: 80px;
+  margin-left: 80px;
+  top:50%;
+  transform: translateY(-50%);
+  max-width: 400px;
+  min-width: 200px;
+  height: 500px;
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+.login-title, .signup-title{
+	text-align:center;
+}
+
+.input-field{
+	padding: 20px 10px;
+}
+
+.login-button, .signup-button {
+  background-color: #04AA6D;
+  color: white;
+  margin:20px 0;
+  padding: 10px 20px;
+  border-radius:10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height:50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.login-button, .signup-button:hover {
+  background-color: Ivory;
+
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  border-radius:8px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#sign-up-request{
+	text-align:center;
+}
+
+#sign-up-request p{
+	margin:0;
+	padding-top:0;
+	padding-bottom:10px;
+}
+
+#sign-up-request a:link{
+	font-weight:680;		
+}
+
+#sign-up-request a:hover{
+	color:Ivory;		
+}
+
+#name-input-row{
+	display:flex;
+	justify-content: flex-start;
+    flex-grow: 1;
+	padding-right: 40px;
+}
+
+#name-input{
+	margin-right:20px;
+}
