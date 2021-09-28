@@ -1,0 +1,16 @@
+{
+    "description" : "Experience the superior detail of High-Resolution Audio with an in-ear design that comes in a range of colours to suit your style.",
+    "specification" : {
+        "WEIGHT":"Approx. 5g (0.2 oz) without cable",
+        "HEADPHONE TYPE":"Closed, dynamic",
+        "DRIVER UNIT":"9mm, dome type (CCAW Voice Coil)",
+        "MAGNET":"Neodym",
+        "IMPEDANCE (OHM)":"16ohmsat 1kHz",
+        "DIAPHRAGM":"PET",
+        "FREQUENCY RESPONSE":"5Hz-40,000Hz",
+        "SENSITIVITIES (DB/MW)":"103dB / mW",
+        "CORD TYPE":"Y-type",
+        "CORD LENGTH":"Approx. 1.2m (47 1 / 4 in) silver-coated OFC Litz wire",
+        "PLUG":"L-shaped gold-plated 4-pole mini plug"
+     }
+}

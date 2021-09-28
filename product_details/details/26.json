@@ -1,0 +1,12 @@
+{
+    "description" : "Bose Sport Open Earbuds are a truly different kind of sport headphone. That’s because they’re the first of their kind that don’t go in your ears. Instead, they combine exclusive Bose OpenAudio™ technology with a unique open-ear design to produce high-quality sound without covering your ears. The city. The surf. Your running buddy. Hear it all and your music at the same time with these entirely new, entirely open sport earbuds.",
+    "specification" : {
+        "Microphone type":"150-ohm Dynamic Noise Cancelling",
+        "Headset variants":"4-pin female XLR connector, 5-pin male XLR connector",
+        "SoundComm B40 Headset":"8' H x 6.5' W x 3.5' D",
+        "On-head weight (not including cable) Single earcup":"10 oz",
+        "On-head weight (not including cable) Dual earcup":"12.7 oz",
+        "Cable length - Headset to control module":"4.8 ft",
+        "Cable length - Control module to XLR connector":"10'"
+     }
+}

@@ -1,0 +1,27 @@
+{
+    "description" : "On the track, in the pool or under the ocean, the WF-SP900 headphones are all you need to take you further than ever before. With a truly wireless design and 4GB of on-board storage so you can listen anywhere.",
+    "specification" : {
+        "WEIGHT":"Approx. 7.3g x 2 (not including the arc supporters)",
+        "HEADPHONE TYPE":"Closed Balanced Armature",
+        "DRIVER UNIT":"Balanced Armature",
+        "FREQUENCY RESPONSE(BLUETOOTHÂ® COMMUNICATION)":"20Hz - 20,000Hz (44.1kHz Sampling)",
+        "VOLUME CONTROL":"Yes (Tap sensor)",
+        "WATERPROOF":"IPX5 / IPX8 (Headset only)2",
+        "NFC":"Yes (Charging Case)",
+        "MEMORY SIZE":"4GB3",
+        "MUSIC PLAY MODE":"Normal / Repeat /Shuflle / Shuffle all / Repeat 1 Song / Folder / Playlists / Album",
+        "AUDIO PLAYBACK":"MP3 ( .mp3) WMA ( .wma) FLAC ( .flac) WAV ( .wav) AAC ( .mp4, .m4a, .3gp)4",
+        "AMBIENT SOUND MODE":"Yes",
+        "BATTERY CHARGE TIME":"Approx. 2.5 Hours (Full charge )",
+        "BATTERY CHARGE METHOD":"USB charging (with Charging Case)",
+        "BATTERY LIFE(CONTINUOUS MUSIC PLAYBACK TIME)":"Max. 3 Hours (Ambient sound mode OFF ) *via Bluetooth playback5678",
+        "BATTERY LIFE(CONTINUOUS MUSIC PLAYBACK TIME WITH INTERNAL MEMORY)":"Max. 6 Hours (Ambient sound mode OFF) *internal memory playback5678",
+        "BATTERY LIFE(CONTINUOUS COMMUNICATION TIME)":"Max. 2.5 Hours",
+        "BLUETOOTHÂ® VERSION":"Bluetooth Specification Version 4.0",
+        "EFFECTIVE RANGE":"Line of sight approx.30ft (10m)",
+        "FREQUENCY RANGE":"2.4GHz band (2.4000GHz-2.4835GHz)",
+        "PROFILE":"A2DP (Advanced Audio Distribution Profile) ,AVRCP (Audio Video Remote Control Profile) ,HFP (Hands-free Profile) ,HSP (Headset Profile)9",
+        "SUPPORTED AUDIO FORMAT(S)":"SBC, AAC1011",
+        "SUPPORTED CONTENT PROTECTION":"SCMS-T"
+     }
+}

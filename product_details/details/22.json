@@ -1,0 +1,15 @@
+{
+    "description" : "World-class adjustable noise cancellation — with situational awareness for when you want to let the world in. High-fidelity audio with adjustable EQ so you can tune music to your liking. Unrivaled voice pickup for the clearest calls. And protein leather cushions for all-day comfort. It’s everything you demand from wireless Bluetooth headphones — amplified. Bose Noise Cancelling Headphones 700, our most advanced headphones ever. And now they’re bundled with the Headphones 700 Charging Case, making them an even smarter — and more convenient — choice.",
+    "specification" : {
+        "Battery life":"Up to 20 hours",
+        "Charging case battery life":"Up to 40 hours",
+        "Battery charging time":"Up to 2.5 hours",
+        "Case charging time":"Up to 3 hours",
+        "Quick 15-minute charge":"For up to 3.5 hours",
+        "Battery charge method":"USB-C",
+        "Bluetooth range":"Up to 33 ft (10 m)",
+        "Bluetooth version":"5.0 (including all headphone profiles)",
+        "Codec":"Codec SBC and AAC",
+        "Microphone":"8 total microphones, 6 microphones for Active Noise Cancelling (ANC), 4 microphones for Voice Pickup (2 are shared with ANC)"
+     }
+}

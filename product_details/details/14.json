@@ -1,0 +1,20 @@
+{
+    "description" : "Designed in a new Silent White colour to reflect the concept of silence and serenity of the noise cancelling headphones.",
+    "specification" : {
+        "HEADPHONE TYPE":"Closed, dynamic",
+        "DRIVER UNIT":"40mm, dome type (CCAW Voice coil)",
+        "MAGNET":"Neodymium",
+        "DIAPHRAGM":"Aluminum coated LCP",
+        "FREQUENCY RESPONSE":"4Hz-40,000Hz",
+        "FREQUENCY RESPONSE (ACTIVE OPERATION)":"4Hz-40,000Hz",
+        "FREQUENCY RESPONSE(BLUETOOTHÂ® COMMUNICATION)":"20Hz - 20,000Hz (44.1kHz Sampling) / 20Hz - 40,000Hz (LDAC 96kHz Sampling, 990kbps)",
+        "SENSITIVITIES (DB/MW)":"105dB / mW (1kHz) (when connecting via the headphone cable with the unit turned on) , 101dB / mW (1kHz) (when connecting via the headphone cable with the unit turned off)",
+        "CORD TYPE":"Single-sided (detachable)",
+        "CORD LENGTH":"Headphone cable (approx. 1.2m, OFC strands, gold-plated stereo mini plug)",
+        "PLUG":"Gold-plated L-shaped stereo mini plug",
+        "WEARING STYLE":"Circumaural",
+        "NFC":"Yes",
+        "DSEE EXTREME":"Yes",
+        "PASSIVE OPERATION":"Yes"
+     }
+}

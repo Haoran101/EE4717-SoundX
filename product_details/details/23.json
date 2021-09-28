@@ -1,0 +1,20 @@
+{
+    "description" : "Better sound begins with better silence. That’s why we engineered QuietComfort® Earbuds with the world’s most effective noise cancelling and high-fidelity audio, plus StayHear™ Max tips for extra comfort. Because when you eliminate distractions, your music takes centerstage, and so does your passion. Roller skating, street art, woodworking — and every other thing that makes you, you. It’s an experience you won’t find in any other wireless earbud. And now for a limited time, QuietComfort® Earbuds are available in two new fashion-forward colors, Stone Blue or Sandstone, exclusive styles only from Bose. Just another way you'll stand out from the crowd.",
+    "specification" : {
+        "Earbuds":"Plastic/gold plating/polymer coating",
+        "Eartips":"Silicone",
+        "Case":"Hard plastic",
+        "Battery life":"Up to 6 hours",
+        "Earbud battery charge time":"2 hours",
+        "Charging case battery charge time":"3 hours",
+        "Quick-charge time":"15 minutes for 2 hours",
+        "Battery charge method":"USB-C or Qi certified wireless charging pad",
+        "Battery type (earbud)":"Lithium-ion (metal-enclosed coin cell)",
+        "Battery type (case)":"Lithium-ion (pouch cell)",
+        "Battery feature":"Automatic on/off feature to preserve battery life",
+        "Bluetooth range":"Up to 30 ft (9.144 m)",
+        "Bluetooth version":"5.1",
+        "Codec":"SBC and AAC",
+        "Microphone":"4 total microphones"
+     }
+}

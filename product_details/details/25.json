@@ -1,0 +1,13 @@
+{
+    "description" : "Introducing the Bose QuietComfort® 35 II Gaming Headset, engineered to play everything. With our award-winning noise cancelling technology and a detachable gaming module, this is the first 2-in-1 gaming and lifestyle headset from Bose. Designed for hours of competitive gaming and music listening, with a classic look and comfortable fit to wear at home, work, and everywhere in-between. ",
+    "specification" : {
+        "Battery life":"Up to 20 hours wireless, up to 40 hours gaming/wired",
+        "Battery charging time":"2.25 hours",
+        "Quick 15-minute charge":"Up to 2.5 hours wireless, up to 5 hours gaming/wired",
+        "Battery charge method":"Micro USB B",
+        "Microphone":"7 total microphones (1 removable in boom), 4 microphones for Active Noise Cancelling (ANC), 2 microphones for voice pickup, 1 microphone for gaming in the boom mic",
+        "Bluetooth range":"Up to 33 ft (10 m)",
+        "Bluetooth version":"4.2 (A2DP, HFP, AVRCP, BLE)",
+        "Codec":"SBC and AAC"
+     }
+}

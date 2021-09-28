@@ -1,0 +1,15 @@
+{
+    "description" : "In your ears or around your neck, Beats Flex are as versatile as the life you lead. Whether you’re listening to music, taking calls, or scrolling your social feed, you’ll always be ready for what’s next. Magnetic earbuds make listening that much easier by automatically playing music when they’re in your ears and pausing when they’re attached around your neck¹. The Flex-Form cable provides all-day comfort with durable Nitinol construction while four eartip options offer a personalized fit. And when you’re not wearing them, the magnetic earbuds keep Beats Flex tangle-free as they easily coil up into your pocket or purse.",
+    "specification" : {
+        "Other Features":"Bluetooth, With Mic, Inline Volume Control, Wireless",
+        "Form Factor":"In Ear",
+        "Connections":"Bluetooth, Wireless",
+        "Power Source":"Battery",
+        "Batteries":"Rechargeable lithium-ion",
+        "Height":"0.6 in / 1.6 cm",
+        "Length":"34 in / 86.4 cm",
+        "Width":"4.2 in / 10.6 cm",
+        "Weight":"18.6 g / 0.66 oz"
+     },
+    "recommended" : [6, 7, 8]
+}

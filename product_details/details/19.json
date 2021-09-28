@@ -1,0 +1,24 @@
+{
+    "description" : "Specifically designed for the PC Gamer, Arctis 5 combines independent game and chat control, cutting-edge DTS surround sound, and dual zone RGB illumination to create the perfect audio solution for your battlestation.",
+    "specification" : {
+        "Neodymium Drivers":"40â€‰mm",
+        "Headphone Frequency Response":"20â€“22000â€‰Hz",
+        "Headphone Sensitivity":"98â€‰db",
+        "Headphone Impedance":"32â€‰Ohm",
+        "Headphone Total Harmonic Distortion":"< 3%",
+        "Headphone Volume Control":"On Ear Cup",
+        "Microphone Frequency Response":"100Hzâ€“10000Hz",
+        "Microphone Pattern":"Bidirectional",
+        "Microphone Sensitivity":"-48â€‰db",
+        "Microphone Impedance":"2200â€‰Ohm",
+        "Microphone Noise Cancellation":"Yes",
+        "Microphone Location":"Retractable",
+        "Microphone Mute Toggle":"On Ear Cup",
+        "Connector Type":"USB or 4-Pole 3.5mm via included adapter",
+        "Cable Length":"3â€‰m / 10â€‰ft",
+        "Cable Material":"Rubber",
+        "Adapter":"Single 3.5â€‰mm, 4-Pole Plug",
+        "Share Jack":"Yes",
+        "Detachable Cable":"Yes"
+     }
+}
