@@ -56,6 +56,17 @@ $row = get_details_by_id($db, $product_id);
     <hr class="solid">
     <div>
         <h1>See More</h1>
+        <div class="product-card" id="product_id_1">
+                <div class="product-small-pic">
+                    <img src="">
+                </div>
+                <div class="product-name-card">
+
+                </div>
+                <div class="card-price">
+
+                </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="productdetails.js"></script>
