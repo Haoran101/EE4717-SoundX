@@ -1,4 +1,4 @@
-<?php include '../db_conn.php' ?>
+<?php include '../db_conn.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,29 +11,31 @@
         <form id="all_filters" action="filtered.php" method="get">
         <div class="brand-filters">
             Brand 
-            <input type="checkbox" name="brand[]" id="brand1" value="brand1">
-            <label for="brand1">brand1</label>
-            <input type="checkbox" name="brand[]" id="brand2" value="brand2">
-            <label for="brand2">brand2</label>
-            <input type="checkbox" name="brand[]" id="brand3" value="brand3">
-            <label for="brand3">brand3</label>
-            <input type="checkbox" name="brand[]" id="brand4" value="brand4">
-            <label for="brand4">brand4</label>
-            <input type="checkbox" name="brand[]" id="brand5" value="brand5">
-            <label for="brand5">brand5</label>
+            <input type="checkbox" name="brand[]" id="brand1" value="1">
+            <label for="brand1">Razer</label>
+            <input type="checkbox" name="brand[]" id="brand2" value="2">
+            <label for="brand2">Beats</label>
+            <input type="checkbox" name="brand[]" id="brand3" value="3">
+            <label for="brand3">Sony</label>
+            <input type="checkbox" name="brand[]" id="brand4" value="4">
+            <label for="brand4">SteelSeries</label>
+            <input type="checkbox" name="brand[]" id="brand5" value="5">
+            <label for="brand5">Bose</label>
         </div>
         <div class="type-filters">
             type 
-            <input type="checkbox" name="type[]" id="type1" value="type1">
-            <label for="type1">type1</label>
-            <input type="checkbox" name="type[]" id="type2" value="type2">
-            <label for="type2">type2</label>
-            <input type="checkbox" name="type[]" id="type3" value="type3">
-            <label for="type3">type3</label>
-            <input type="checkbox" name="type[]" id="type4" value="type4">
-            <label for="type4">type4</label>
-            <input type="checkbox" name="type[]" id="type5" value="type5">
-            <label for="type5">type5</label>
+            <input type="checkbox" name="Wireless" id="type1" value="true">
+            <label for="type1">Wireless</label>
+            <input type="checkbox" name="Wired" id="type2" value="true">
+            <label for="type2">Wired</label>
+            <input type="checkbox" name="Earbuds" id="type3" value="true">
+            <label for="type3">Earbuds</label>
+            <input type="checkbox" name="Gaming" id="type4" value="true">
+            <label for="type4">Gaming</label>
+            <input type="checkbox" name="Sport" id="type5" value="true">
+            <label for="type5">Sport</label>
+            <input type="checkbox" name="Bluetooth" id="type6" value="true">
+            <label for="type5">Bluetooth</label>
         </div>
         <div class="price-filter">
             Price
