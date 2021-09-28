@@ -63,6 +63,7 @@ td{
 .product-small-pic {
     padding-top: 30px;
     margin: auto;
+    max-height: 150px;
 }
 
 .centered {
