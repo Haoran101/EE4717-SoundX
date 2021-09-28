@@ -47,3 +47,8 @@ button { /* Green */
 #buy-now-button{
     background-color:#008CBA;
 }
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+}
