@@ -1,0 +1,11 @@
+{
+    "description" : "Get inspired with Solo Pro wireless headphones. To deliver sound how you want it, Solo Pro features two listening modes: Active Noise Cancelling (ANC) and Transparency mode. Beats’ Pure ANC gives you the space to create with fully immersive sound, while Transparency mode helps you stay aware of your surroundings. Every detail of Solo Pro has been carefully considered, right down to the intuitive way the headphones turn on and off via folding. The ergonomic design delivers exceptional comfort for extended wear and sleek style. And with up to 22 hours of battery life, you can keep the music going no matter where your day takes you.",
+    "specification" : {
+        "Form Factor":"On Ear",
+        "Connections":"Bluetooth, Wireless",
+        "Power Source":"Battery",
+        "Batteries":"Rechargeable lithium-ion",
+        "Height":"17.9 cm/7.05 in.",
+        "Weight":"267 g/9.42 oz."
+     }
+}

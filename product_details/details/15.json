@@ -1,0 +1,17 @@
+{
+    "description" : "The precision sound and full-spectrum clarity of the MDR-1AM2 headphones captures the hearts of music lovers everywhere. And with a lightweight design and soft cushioned earpads, you can listen for hours in total comfort.",
+    "specification" : {
+        "WEIGHT":"187g",
+        "HEADPHONE TYPE":"Closed Dynamic",
+        "DRIVER UNIT":"40mm (Dome Type)",
+        "MAGNET":"Neodymium",
+        "IMPEDANCE (OHM)":"16Î©",
+        "DIAPHRAGM":"Aluminium-Coated LCP",
+        "FREQUENCY RESPONSE":"3-100000Hz2",
+        "SENSITIVITIES (DB/MW)":"98dB / mW",
+        "CORD TYPE":"Detachable / Silver coated OFC",
+        "CORD LENGTH":"1.2m",
+        "PLUG":"Gold-plated L-shaped Stereo Mini",
+        "WEARING STYLE":"Circumaural"
+     }
+}

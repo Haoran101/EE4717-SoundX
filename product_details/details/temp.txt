@@ -1,0 +1,30 @@
+Neodymium Drivers
+40 mm
+Headphone Frequency Response
+10–40,000 Hz
+Headphone Sensitivity
+102 dB SPL
+Headphone Impedance
+32 Ohm
+Headphone Total Harmonic Distortion
+< 1%
+Microphone Type
+Retractable Boom
+Microphone Polar Pattern
+Bidirectional Noise-Canceling
+Microphone Frequency Response
+100–10,000 Hz
+Microphone Sensitivity
+-38 dBV/Pa
+Microphone Impedance
+2200 Ohm
+Microphone Noise Cancellation
+Yes
+Wireless 2.4G range
+40 ft, 12m
+Battery Life
+20 hours (10 per battery)
+Bluetooth Version
+4.1
+Bluetooth Profiles
+A2DP, HFP, HSP

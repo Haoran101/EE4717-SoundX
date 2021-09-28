@@ -1,0 +1,21 @@
+{
+    "description" : "An exceptional listening experience that’s tailored just for you. The WF-1000XM4 truly wireless headphones take industry-leading noise cancelling1 and audio quality to the next level. Made to fit every ear, they offer a personalised experience that adjusts to every situation.",
+    "specification" : {
+        "WEIGHT":"Approx. 41 g",
+        "HEADPHONE TYPE":"Truly Wireless",
+        "DRIVER UNIT":"6 mm",
+        "MAGNET":"High power neodymium magnets",
+        "FREQUENCY RESPONSE(BLUETOOTHÂ® COMMUNICATION)":"20Hz - 20,000Hz(44.1kHz sampling) / 20Hz - 40,000Hz(LDAC 96kHz sampling, 990kbps)",
+        "WATERPROOF":"Yes(IPX4)",
+        "DSEE EXTREME":"Yes",
+        "BATTERY CHARGE TIME":"Approx. 1.5 hrs",
+        "BATTERY LIFE(CONTINUOUS MUSIC PLAYBACK TIME)":"Max. 8 hrs(NC On) / Max. 12 hrs(NC Off)",
+        "BATTERY LIFE(CONTINUOUS COMMUNICATION TIME)":"Max. 5.5 hrs(NC On) / Max. 6.0 hrs(NC Off)",
+        "BLUETOOTHÂ® VERSION":"BLUETOOTH Specification Version5.2",
+        "PROFILE":"A2DP, AVRCP, HFP, HSP",
+        "SUPPORTED AUDIO FORMAT(S)":"SBC, AAC, LDAC",
+        "SUPPORTED CONTENT PROTECTION":"SCMS-T",
+        "AMBIENT SOUND MODE":"Yes",
+        "QUICK ATTENTION":"Yes"
+     }
+}
