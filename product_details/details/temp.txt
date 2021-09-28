@@ -1,22 +1,7 @@
-Headphone Style
-In-ear (canalphone)
-Headphone Frequency Response
-20–20000 Hz
-Headphone Sensitivity
-102 dBSPL @ 1 kHz, 1 mW
-Headphone Total Harmonic Distortion
-<1%
-Microphone Frequency Response
-100 - 10,000 Hz
-Microphone Pattern
-Omnidirectional
-Microphone Sensitivity
--44 dBV/Pa
-Microphone Location
-Detachable
-Connector Type
-Single 3.5mm, 4-pole plug
-Cable Length
-1.2 m / 4 ft.
-Cable Material
-Rubber
+Microphone type:150-ohm Dynamic Noise Cancelling
+Headset variants:4-pin female XLR connector, 5-pin male XLR connector
+SoundComm B40 Headset:8' H x 6.5' W x 3.5' D
+On-head weight (not including cable) Single earcup:10 oz
+On-head weight (not including cable) Dual earcup:12.7 oz
+Cable length - Headset to control module:4.8 ft
+Cable length - Control module to XLR connector:10'
