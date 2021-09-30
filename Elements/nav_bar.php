@@ -25,7 +25,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 			<ul class="nav-dropdown-item">
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=1&min_price=0&max_price=1000">
+						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=1">
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $brands[0]; ?></div>
 						</a>						
@@ -33,7 +33,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				</li>
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=2&min_price=0&max_price=1000">
+						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=2">
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $brands[1]; ?></div>
 						</a>					
@@ -41,7 +41,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				</li>
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=3&min_price=0&max_price=1000">
+						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=3">
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $brands[2]; ?></div>
 						</a>						
@@ -49,7 +49,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				</li>
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=4&min_price=0&max_price=1000">
+						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=4">
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $brands[3]; ?></div>
 						</a>						
@@ -57,7 +57,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				</li>
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=5&min_price=0&max_price=1000">
+						<a class="item-block-link" href="../product_list/filtered.php?brand%5B%5D=5">
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $brands[4]; ?></div>
 						</a>					
@@ -75,7 +75,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 			<ul class="nav-dropdown-item">
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[0]}=true&min_price=0&max_price=1000"; ?>>
+						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[0]}=true"; ?>>
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $types[0]; ?></div>
 						</a>						
@@ -83,7 +83,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				</li>
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[1]}=true&min_price=0&max_price=1000"; ?>>
+						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[1]}=true"; ?>>
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $types[1]; ?></div>
 						</a>					
@@ -91,7 +91,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				</li>
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[2]}=true&min_price=0&max_price=1000"; ?>>
+						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[2]}=true"; ?>>
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $types[2]; ?></div>
 						</a>						
@@ -99,7 +99,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				</li>
 				<li class="subnav-item">
 					<div class="item-block">
-						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[3]}=true&min_price=0&max_price=1000"; ?>>
+						<a class="item-block-link" href=<?php echo "../product_list/filtered.php?{$types[3]}=true"; ?>>
 							<img src="../img/placeholder.png" alt="SoundX" width="130px"><br>
 							<div class="font-item"><?php echo $types[3]; ?></div>
 						</a>						
@@ -113,7 +113,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
         <!-- Right part -->
         <a class="right-nav" href="../account/">
         <img class="account-logo" src="../img/profile-user.png" alt="account"></a>
-        <a class="right-nav" href="html/cart.html">
+        <a class="right-nav" href="../cart/">
         <img class="cart-logo" src="../img/shopping-cart.png" alt="cart" style="padding-top: 3px;"></a>
         
     </div>

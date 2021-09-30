@@ -48,6 +48,7 @@ if (isset($_SESSION['user_id'])){
 							$row = $result -> fetch_row();
 							$_SESSION['user_id'] = $row[0];
 							$_SESSION['email'] = $_POST["email"];
+							$_SESSION['cart'] = array();
 							echo "<script>alert({$_SESSION['user_id']};)</script>";
 							header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/"); 
 						} else {
