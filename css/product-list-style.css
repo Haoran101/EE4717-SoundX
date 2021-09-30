@@ -29,7 +29,8 @@
 
 .product-result-title{
     display: block;
-    padding: 40px 0px 40px 80px;
+    margin: 120px 0 40px 80px;
+
 }
 
 
@@ -50,10 +51,9 @@
 }
 
 #filter-separation{
-    margin:10px 0 30px 0;
+    margin:10px 40px 40px 0;
     background-color:slategray;
     height: 0.6px;
-    min-width: 1300px;
     border-width:0;
 }
 

@@ -1,63 +1,31 @@
-body {
-    padding: 0;
-    margin: 0;
-    font-family: "Segoe UI",Arial,sans-serif;
-    font-weight: 400;
-    min-width: 1300px;
-  }
-
-/* navigation bar design */
 .nav-bar-container {
-    height: 50px;
-    min-width: 1300px;
-    padding: 10px 40px 10px 0;
+    min-height: 50px;
     border-width: 0px;
     font-size: 20px;
-    align-content: center;
+    display: block;
     position: sticky;
     top: 0;
-    right: 0;
     z-index: 20;
     background-color: SlateGray;
+    text-align: center;
     color: Azure;
   }
   
-  .brand-container a, .type-container a, .product-container a, .contact-container a{
-      font-weight: 600;
-      margin: auto 20px;
-  }
-
   /*nav dropdown list item*/
   .nav-dropdown-item {
       list-style-type: none;
       display: flex;
       justify-content: center;
       flex-grow: 1;
-      min-width: 1300px;
+      padding-right: 40px;
   }
   
   .subnav-item{
       display:flex;
+      flex:0 0 20%;
       justify-content: center;
       align-items: center;
-      padding:30px 60px;
-  }
-
-.item-block{
-      display: flex;
-      justify-content: flex-start;
-  }
-
-.font-item{
-    display: block;
-    margin-top:10px;  
-    font-size: 24px;
-}
-
-  .item-img{
-      display: block;
-      width: 130px;
-      display: block;
+      padding:30px 20px;
   }
   
   a.item-block-link{
@@ -88,20 +56,17 @@ body {
   
   /* nav part on right */
   .right-nav{
-    margin: 10px 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px 10px;
     float: right;
     text-decoration: none;
     color: Azure;
   }
-
-  .right-nav-item{
-      margin:auto 0 auto 50px;
-      display:inline-block;
-  }
   
   .brand-dropdown-content, .type-dropdown-content {
     color: black;
-    top: 70px;
+    top: 50px;
     display: none;
     position: absolute;
     background-color:Ivory;
@@ -118,40 +83,4 @@ body {
   .type-container:hover .type-dropdown-content{
     display: block;
   }
-
-
-/* footer */
-/* contact part */
-#contact {
-    display:block;
-  background-color: SlateGray;
-  min-width:1300px;
-  position:relative;
-
-}
-
-#contact-text{
-	display:block;
-	position:relative;
-	text-align: left;
-	color: Azure;
-	margin: auto 0;
-  padding: 40px 100px;
-}
-
-/*contact heading*/
-#contact-text h2{
-  font-size: 40px;
-  font-weight: 600;
-  padding: 20px 0;
-  margin: 0;
-}
-
-/* remove default p paddSing for contact */
-#contact p{
-  margin: auto 80px;
-  line-height: 1.8;
-  font-size: 20px;
-  font-weight: 500;
-}
   
