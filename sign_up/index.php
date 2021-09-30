@@ -8,7 +8,7 @@
 	
 	<body>
 		<div class="signup-bg">
-				  <form action="/action_page.php" class="signup-container">
+				  <form action="" class="signup-container">
 					<div class="sign-up-input-block">
 						<div class="signup-title">
 							<h1>Member Sign Up</h1>
@@ -35,7 +35,7 @@
 								<input type="password" placeholder="Set Password." name="password" id="Password" required>
 								
 								<label for="ConfirmPassword"><b>Confirm Password</b></label>
-								<input type="password" placeholder="Confirm Password" name="confirmPassword" id="ConfirmPassword" required>
+								<input type="password" placeholder="Confirm Password" name="confirmPassword" id="ConfirmPassword" onchange="confirmPassword(this.value);" required>
 							</div>
 						</div>
 						<div>
@@ -44,5 +44,6 @@
 				  </form>
 			</div>
 		</div>
+		<script src="signup.js"></script>
 	</body>
 </html>
