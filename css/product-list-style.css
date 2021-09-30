@@ -1,0 +1,133 @@
+.filters-container, .filter-result-container{
+    display:flex;
+    justify-content: flex-start;
+    padding: 40px 0px 40px 80px;
+}
+
+.brand-filters, .type-filters, .price-filter{
+    display:flex;
+    justify-content: flex-start;
+    grid-row: 1;
+    min-width: 800px;
+}
+
+.filter-title, .product-result-title{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: 120px;
+    left:0;
+}
+
+.product-result-title{
+    display: block;
+    padding: 40px 0px 40px 80px;
+}
+
+
+.filter-checkbox-list, .filter-price-range{
+    display: block;
+    position:relative;
+    margin: auto;
+    margin-left: 40px;
+}
+
+.checkbox-item{
+    display: inline-block;
+    position:relative;
+    margin: auto;
+    margin-right:20px;
+    margin-left:0px;
+}
+
+#filter-separation{
+    margin:10px 0 30px 0;
+    background-color:slategray;
+    height: 0.6px;
+    border-width:0;
+}
+
+input[type=checkbox]:checked, input[type=checkbox]{
+    cursor: pointer;
+    width: 20px;
+    height: 20px; 
+    margin-right:10px;
+    vertical-align: middle;
+}
+
+input[type=checkbox]{
+    background-color:darkgrey;
+}
+
+input[type=checkbox]:checked {
+    background-color:#1E80EF;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1.2px solid;
+    border-radius: 5px;
+    border-color: darkgrey;
+    height:20px;
+    width: 80px;
+    vertical-align: middle;
+    color:grey;
+}
+
+input:focus{
+    background-color: #ddd;
+}
+  
+input[type=submit] {
+    width: 150px;
+    float:right;
+    margin-top:30px;
+    background-color: #4CAF50;
+    color: white;
+    border:none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+input[type=submit]:hover {
+    background-color:ivory;
+  }
+
+label{
+    font-size: 18px;
+    font-weight: 200;
+    bottom:5px;
+    vertical-align: middle;
+}
+
+
+
+/*display product*/
+
+.product-result{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+.product-card {
+    border: black 2px solid;
+    display: block;
+	width: 250px;
+    height: 250px;
+    margin: 0px 60px 100px 60px;
+}
+
+.product-small-pic {
+    padding-top: 30px;
+    margin: auto;
+    max-height: 150px;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: black;
+}
+

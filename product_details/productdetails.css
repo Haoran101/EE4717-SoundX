@@ -53,27 +53,3 @@ td{
     padding: 5px;
 }
 
-.product-card {
-    width: 200px;
-    height: 300px;
-    border: black 2px solid;
-    margin: 20px;
-}
-
-.product-small-pic {
-    padding-top: 30px;
-    margin: auto;
-    max-height: 150px;
-}
-
-.centered {
-    min-width: 150px;
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-}
-
-.product-card-link {
-    text-decoration: none;
-    color: black;
-}
