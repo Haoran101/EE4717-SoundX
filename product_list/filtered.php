@@ -5,7 +5,7 @@
     <title>Details</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/product-list-style.css">
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/elements.css" />
 </head>
 
 <body>
@@ -140,15 +140,16 @@
             echo '<div class = "product-list-info">';
             echo '<div class="product-list-info-title"><p>'.$product_name.'</p></div>';
             echo '<div class="product-list-info-price"><p>$'.$price.'</p></div>';
-            echo '<hr id="filter-separation">';
+            //echo '<hr id="filter-separation">';
             echo '</div></div></a>';
         }
         echo '</div></div>';
 
     }
-   
+       
     ?>
     <script src="product_list.js"></script>
+    <?php include '../Elements/footer.php';?>
 </body>
 
 </html>

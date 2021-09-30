@@ -1,0 +1,210 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 400;
+}
+
+.title{
+    margin-top: 100px;
+}
+
+/* product list*/
+
+.product-list-flex{
+	display:flex;
+	justify-content:center;
+	margin: 0 auto;
+}
+
+.product-list-item-block{
+    display: block;
+	width: 250px;
+    min-height: 250px;
+    margin: 0px 60px 100px 60px;
+	
+}
+
+.product-list-item-img{
+    display: block;
+}
+
+.topSale-item-img{
+    padding-top: 30px;
+    display: block;
+    height:200px;
+    width:auto;
+    overflow:hidden;    
+}
+
+.product-list-item-info{
+    display: block;
+    width: 100%;
+    text-decoration: none
+}
+
+.item-info-body{
+}
+
+.item-info-body-title{
+	padding: 10px 0 5px;
+	margin: 0px;
+	font-family: Gotham,Verdana,sans-serif;
+    font-style: normal;
+	font-size: 15px;
+    line-height: 15px;
+	font-weight: 800;
+}
+
+.item-info-body-type{
+	padding: 5px 0 5px;
+	margin: 0px;
+	font-family: Gotham,Verdana,sans-serif;
+    font-style: normal;
+	font-size: 15px;
+    line-height: 15px;
+	font-weight: 400;
+}
+
+.topSale-banner-container{
+	min-height: 350px;	
+	max-width: 100%;
+	min-width: 1300px;
+	position: relative;
+	margin: auto;
+}
+
+.topSale-banner-img{
+	display: block;
+    /*z-index: 0;*/
+    width: 100%;
+	height: 350px;
+    min-width: 1300px;
+	background-image:url("../img/placeholder.png");
+	background-position: left;
+	background-repeat: no-repoeat;
+	background-size:cover;
+
+}
+
+.topSale-banner-text-container{
+	margin-left: 60%;
+	text-align:left;
+	position: absolute;
+    /*z-index: 10;*/
+    width: 30%;
+    top: 50%;
+	transform: translateY(-50%);
+}
+
+#topSale-title {
+	text-align:left;	
+}
+
+.product-button{
+	display: flex;
+	justify-content:center;
+    background-color:#ffffff;
+	text-decoration: none;
+    padding: 10px 20px;
+	margin:20px 0 0;
+    background-clip: padding-box;
+    border-radius: 8px;
+    cursor: pointer;
+	width: 150px;
+	
+}
+
+.product-button-text{
+    padding: 1px 2px;
+    color: #000200;
+	font-size: 18px;
+    font-weight: 700;
+}
+
+/*see more*/
+.type-list-flex{
+    display:flex;
+	justify-content:center;
+	margin: 80px 30px;
+}
+.type-list-item-block{
+	display:block;
+	margin: 0px 60px;
+}
+
+.type-img{
+	display:block;
+	border-radius: 50%;
+	width: 180px;
+}
+
+.type-item-title{
+	display:flex;
+	justify-content:center;
+	font-weight:800;
+	font-size:20px;
+	
+}
+
+
+/* Slideshow container */
+.top-banner-container{
+  max-width: 90%;
+  min-width:1300px;
+  position: relative;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* Hide the images by default */
+.banner-page {
+  display: block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: azure;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.caption-text {
+  color:azure;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* heading 1 style */
+h1 {
+  text-align: center;
+  font-family: Calibri, sans-serif;
+  letter-spacing: 1px;
+  font-size: 60px;
+  margin:0;
+}

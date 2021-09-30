@@ -9,7 +9,7 @@ $row = get_details_by_id($db, $product_id);
     <head>
         <title>Details</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../css/elements.css" />
         <link rel="stylesheet" href="productdetails.css">
     </head>
 <body>

@@ -64,7 +64,7 @@ body, html {
 	padding: 20px 10px;
 }
 
-.login-button, .signup-button {
+.login-button, .signup-button{
   background-color: #04AA6D;
   color: white;
   margin:20px 0;
@@ -78,11 +78,9 @@ body, html {
   font-weight: 600;
 }
 
-.login-button, .signup-button:hover {
+.login-button:hover, .signup-button:hover {
   background-color: Ivory;
-
 }
-
 
 input[type=text], input[type=password] {
   width: 100%;
