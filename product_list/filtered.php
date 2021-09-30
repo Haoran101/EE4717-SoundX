@@ -93,34 +93,39 @@
     include_once '../db_conn.php';
     include_once '../query_utils.php';
     $query = "SELECT * FROM product WHERE ";
+    $constrant_set = array();
     $filters = $_GET;
-    if (!isset($filters["min_price"])){
-        $filters["min_price"] = "0";
+    if (isset($filters["min_price"])){
+        $constrant_set[] = " price >= {$filters["min_price"]} ";
+        unset($filters["min_price"]);
     }
 
-    if (!isset($filters["max_price"])){
-        $filters["max_price"] = "1000";
+    if (isset($filters["max_price"])){
+        $constrant_set[] = " price <= {$filters["max_price"]} ";
+        unset($filters["max_price"]);
     }
-    //var_dump($filters);
+
+    if (isset($filters["brand"])){
+        $brands = $filters["brand"];
+        $comma_saparate = implode(",", $brands);
+        $constrant_set[] = " brand_id IN ({$comma_saparate})";
+        unset($filters["brand"]);
+    }
+
+    $type_contraint = array();
     foreach ($filters as $key => $value){
-        if ($key == "brand"){;
-            $query.= "brand_id IN (";
-            foreach ($filters[$key] as $brand_id){
-                $query.= $brand_id.", ";
-            }
-            $query = substr($query, 0, -2);
-            $query.= ") and ";
-        } else if ($key != "min_price" && $key != "max_price"){
-            $query.= $key."= 1 and ";
-        } else {
-            continue;
-        }
+        $type_contraint[] = $key."=".$value;
     }
-    $query.= "price >= ".$filters["min_price"]." and price <=".$filters["max_price"];
+
+    if (count($type_contraint) > 0){
+        $or_saparate = implode(" or ", $type_contraint);
+        $constrant_set[] = "(".$or_saparate.")";
+    }
+
+    $query .= implode(" and ", $constrant_set);
     var_dump($query);
 
     $result_arr = get_product_list_by_query($db, $query);
-
 
     echo '<div class="product-result-title">RESULTS</div>'; 
 
