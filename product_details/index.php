@@ -1,8 +1,9 @@
 <?php include_once '../db_conn.php';
 include_once '../query_utils.php';
+session_start();
 $product_id = $_GET["product_id"];
 $row = get_details_by_id($db, $product_id);
-//get_columns_from_table($db, 'product');
+$added_in_cart = in_array($product_id, $_SESSION['cart']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +31,16 @@ $row = get_details_by_id($db, $product_id);
                 <h1><?php echo $row["product_name"]; ?></h1>
                 <h4><?php echo $row["short_description"]; ?></h4>
                 <p class="price"><strong>$<?php echo $row["price"]; ?></strong></p>
-                <button id="cart-button">Add to Cart</button>
+                <form action="add_to_cart.php" method="post">
+                <input type="text" hidden name="product_id" value="<?php echo $product_id; ?>">
+                <button id="cart-button" onclick="this.form.submit();">
+                <?php
+                    if ($added_in_cart){
+                        echo "View In Cart";
+                    } else {echo "Add to Cart";}
+                ?>
+                </button>
+                </form>
                 <button id="buy-now-button">Buy Now</button>
         </div>
     </div>

@@ -93,10 +93,19 @@
     include_once '../db_conn.php';
     include_once '../query_utils.php';
     $query = "SELECT * FROM product WHERE ";
-    foreach ($_GET as $key => $value){
+    $filters = $_GET;
+    if (!isset($filters["min_price"])){
+        $filters["min_price"] = "0";
+    }
+
+    if (!isset($filters["max_price"])){
+        $filters["max_price"] = "1000";
+    }
+    //var_dump($filters);
+    foreach ($filters as $key => $value){
         if ($key == "brand"){;
             $query.= "brand_id IN (";
-            foreach ($_GET[$key] as $brand_id){
+            foreach ($filters[$key] as $brand_id){
                 $query.= $brand_id.", ";
             }
             $query = substr($query, 0, -2);
@@ -107,7 +116,7 @@
             continue;
         }
     }
-    $query.= "price >= ".$_GET["min_price"]." and price <=".$_GET["max_price"];
+    $query.= "price >= ".$filters["min_price"]." and price <=".$filters["max_price"];
     var_dump($query);
 
     $result_arr = get_product_list_by_query($db, $query);
