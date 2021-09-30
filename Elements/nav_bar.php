@@ -3,7 +3,7 @@
   <head>
     <title>SoundX</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/elements.css" />
   </head>
   <body>
 <div class="nav-bar-container">

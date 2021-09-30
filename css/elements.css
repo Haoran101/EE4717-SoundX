@@ -1,0 +1,121 @@
+/* navigation bar design */
+.nav-bar-container {
+    min-height: 50px;
+    min-width: 1120px;
+    border-width: 0px;
+    font-size: 20px;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: SlateGray;
+    text-align: center;
+    color: Azure;
+  }
+  
+  /*nav dropdown list item*/
+  .nav-dropdown-item {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      padding-right: 40px;
+  }
+  
+  .subnav-item{
+      display:flex;
+      flex:0 0 20%;
+      justify-content: center;
+      align-items: center;
+      padding:30px 20px;
+  }
+  
+  a.item-block-link{
+      text-decoration:none;
+  }
+
+  /* Top left website logo */
+.logo{
+    float: left;
+    padding: 0 10px 0 10px;
+  }
+  
+  /* nav part on left */
+  .left-nav{
+    float: left;
+    padding: 10px 10px 0 10px;
+    min-width:40px;
+    text-decoration: none;
+    color: Azure;
+    height: 50px;
+  }
+  
+  /* change nav text color to  */
+  .left-nav:hover{
+    background-color: azure;
+    color: black;
+  }
+  
+  /* nav part on right */
+  .right-nav{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px 10px;
+    float: right;
+    text-decoration: none;
+    color: Azure;
+  }
+  
+  .brand-dropdown-content, .type-dropdown-content {
+    color: black;
+    top: 50px;
+    display: none;
+    position: absolute;
+    background-color:Ivory;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin:auto;
+  }
+  
+  .brand-container:hover .brand-dropdown-content{
+    display: block;
+  }
+  
+  .type-container:hover .type-dropdown-content{
+    display: block;
+  }
+
+
+/* footer */
+/* contact part */
+#contact {
+	display:block;
+  background-color: SlateGray;
+  min-width:100%;
+  position:relative;
+
+}
+
+#contact-text{
+	display:block;
+	position:relative;
+	text-align: left;
+	color: Azure;
+	margin: auto 10%;
+}
+
+/*contact heading*/
+#contact h2{
+  font-size: 40px;
+  padding: 20px 0;
+  margin: auto 0;
+}
+
+/* remove default p padding for contact */
+#contact p{
+  padding: 0 0 40px 20px;
+  line-height: 1.5;
+  font-size: 20px;
+}
+  
