@@ -132,7 +132,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<img class="account-logo" src="../img/profile-user.png" alt="account"></a>
 			</div>
 			<div class="right-nav-item">
-				<a href="html/cart.html">
+				<a href="../cart/">
 					<img class="cart-logo" src="../img/shopping-cart.png" alt="cart"></a>
 			</div>
 		</div>
