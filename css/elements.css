@@ -1,33 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    min-width: 1300px;
+  }
+
 /* navigation bar design */
 .nav-bar-container {
-    min-height: 50px;
-    min-width: 1120px;
+    height: 50px;
+    min-width: 1300px;
+    padding: 10px 40px 10px 0;
     border-width: 0px;
     font-size: 20px;
-    display: block;
+    align-content: center;
     position: sticky;
     top: 0;
+    right: 0;
     z-index: 20;
     background-color: SlateGray;
-    text-align: center;
     color: Azure;
   }
   
+  .brand-container a, .type-container a, .product-container a, .contact-container a{
+      font-weight: 600;
+      margin: auto 20px;
+  }
+
   /*nav dropdown list item*/
   .nav-dropdown-item {
       list-style-type: none;
       display: flex;
       justify-content: center;
       flex-grow: 1;
-      padding-right: 40px;
+      min-width: 1300px;
   }
   
   .subnav-item{
       display:flex;
-      flex:0 0 20%;
       justify-content: center;
       align-items: center;
-      padding:30px 20px;
+      padding:30px 60px;
+  }
+
+.item-block{
+      display: flex;
+      justify-content: flex-start;
+  }
+
+.font-item{
+    display: block;
+    margin-top:10px;  
+    font-size: 24px;
+}
+
+  .item-img{
+      display: block;
+      width: 130px;
+      display: block;
   }
   
   a.item-block-link{
@@ -58,17 +88,20 @@
   
   /* nav part on right */
   .right-nav{
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 5px 10px;
+    margin: 10px 0px;
     float: right;
     text-decoration: none;
     color: Azure;
   }
+
+  .right-nav-item{
+      margin:auto 0 auto 50px;
+      display:inline-block;
+  }
   
   .brand-dropdown-content, .type-dropdown-content {
     color: black;
-    top: 50px;
+    top: 70px;
     display: none;
     position: absolute;
     background-color:Ivory;
@@ -90,9 +123,9 @@
 /* footer */
 /* contact part */
 #contact {
-	display:block;
+    display:block;
   background-color: SlateGray;
-  min-width:100%;
+  min-width:1300px;
   position:relative;
 
 }

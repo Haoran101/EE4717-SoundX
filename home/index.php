@@ -13,8 +13,8 @@ if (!isset($_SESSION['user_id'])){
   <head>
     <title>SoundX</title>
     <meta charset="utf-8" />
-	<link rel="stylesheet" href="../css/nav-bar-style.css" />
-    <link rel="stylesheet" href="../style.css" />
+	<link rel="stylesheet" href="../css/elements.css" />
+    <link rel="stylesheet" href="../css/home-style.css" />
   </head>
   <body>
     <!-- the navigation bar -->
@@ -57,7 +57,7 @@ if (!isset($_SESSION['user_id'])){
 					<div class="product-list-item-block">
 						<div class="product-list-item-img">
 							<a href="product.html" class="item-img-link">
-								<img src="../img/placeholder.png" class="item-img" width="250px">
+								<img src="../img/placeholder.png" class="topSale-item-img" width="250px">
 							</a>
 						</div>
 						<div class="product-list-item-info">
@@ -73,7 +73,7 @@ if (!isset($_SESSION['user_id'])){
 					<div class="product-list-item-block">
 						<div class="product-list-item-img">
 							<a href="product.html" class="item-img-link">
-								<img src="../img/placeholder.png" class="item-img" width="250px">
+								<img src="../img/placeholder.png" class="topSale-item-img" width="250px">
 							</a>
 						</div>
 						<div class="product-list-item-info">
@@ -89,7 +89,7 @@ if (!isset($_SESSION['user_id'])){
 					<div class="product-list-item-block">
 						<div class="product-list-item-img">
 							<a href="product.html" class="item-img-link">
-								<img src="../img/placeholder.png" class="item-img" width="250px">
+								<img src="../img/placeholder.png" class="topSale-item-img" width="250px">
 							</a>
 						</div>
 						<div class="product-list-item-info">

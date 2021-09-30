@@ -10,7 +10,7 @@ $added_in_cart = in_array($product_id, $_SESSION['cart']);
     <head>
         <title>Details</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../css/elements.css" />
         <link rel="stylesheet" href="productdetails.css">
     </head>
 <body>
