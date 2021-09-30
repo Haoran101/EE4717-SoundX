@@ -6,13 +6,15 @@ $row = get_details_by_id($db, $product_id);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Details</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="productdetails.css">
-</head>
+    <head>
+        <title>Details</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="productdetails.css">
+    </head>
 <body>
     <!-- navigation bar -->
+    <?php include '../Elements/nav_bar.php';?>
     <div class="product-title">
         <div class="image-and-selector">
             <img src=<?php echo"../img/product/{$product_id}-1.jpg"?> id="product_big_picture"/><br>
@@ -68,7 +70,7 @@ $row = get_details_by_id($db, $product_id);
                 
         </div>
     </div>
-
+    <?php include '../Elements/footer.php'; ?>
     <script type="text/javascript" src="productdetails.js"></script>
 </body>
 </html>
