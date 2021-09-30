@@ -7,39 +7,6 @@ body {
 }
 
 /* the navigation bar container */
-.nav-bar-container {
-  min-height: 50px;
-  border-width: 0px;
-  font-size: 20px;
-  display: block;
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background-color: SlateGray;
-  text-align: center;
-  color: Azure;
-}
-
-/*nav dropdown list item*/
-.nav-dropdown-item {
-	list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-	padding-right: 40px;
-}
-
-.subnav-item{
-	display:flex;
-	flex:0 0 20%;
-	justify-content: center;
-    align-items: center;
-	padding:30px 20px;
-}
-
-a.item-block-link{
-	text-decoration:none;
-}
 
 /* product list8*/
 .product-list{
