@@ -114,23 +114,39 @@
 
 
     echo '<div class="product-result-title">RESULTS</div>'; 
-    echo '<div class="filter-result-container">';     
 
-    echo '<div class = "product-result">';
-    for ($i=0; $i<count($result_arr); $i++){
-        $row = $result_arr[$i];
-        $product_id = $row['product_id'];
-        $product_name = $row['product_name'];
-        $price = $row['price'];
-
-        echo '<a class = "product-card-link" href="../product_details/index.php?product_id='.$product_id.'">';
-        echo '<div class = "product-card" id="product_id_'.$row['product_id'].'">';
-        echo '<img class = "product-small-pic" src="../img/product-snapshot/'.$product_id.'.png" width="150px">';
-        echo '<h4>'.$product_name.'</h4>';
-        echo '<h2>$'.$price.'</h2>';
-        echo '</div></a>';
+    if (empty($result_arr)){
+        echo '<div style="display: flex; justify-content: center;"><img src="../img/no_result.png" style="width:500px;"></div>';
     }
-    echo '</div></div>';
+
+    
+    //if no result is available
+        
+    //echo '<div><img src="../img/no_result.png" style="margin: 50px auto 0; width: 100%; height=auto;"></div>';
+    else{
+        echo '<div class="filter-result-container">';     
+
+        echo '<div class = "product-result">';
+        for ($i=0; $i<count($result_arr); $i++){
+            $row = $result_arr[$i];
+            $product_id = $row['product_id'];
+            $product_name = $row['product_name'];
+            $price = $row['price'];
+    
+            echo '<a class = "product-card-link" href="../product_details/index.php?product_id='.$product_id.'">';
+            echo '<div class = "product-card" id="product_id_'.$row['product_id'].'">';
+            echo '<div>';
+            echo '<img class = "product-small-pic" src="../img/product-snapshot/'.$product_id.'.png" width="150px"></div>';
+            echo '<div class = "product-list-info">';
+            echo '<div class="product-list-info-title"><p>'.$product_name.'</p></div>';
+            echo '<div class="product-list-info-price"><p>$'.$price.'</p></div>';
+            echo '<hr id="filter-separation">';
+            echo '</div></div></a>';
+        }
+        echo '</div></div>';
+
+    }
+   
     ?>
     <script src="product_list.js"></script>
 </body>
