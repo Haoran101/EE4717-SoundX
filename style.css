@@ -9,6 +9,7 @@ body {
 /* the navigation bar container */
 .nav-bar-container {
   min-height: 50px;
+  min-width: 1120px;
   border-width: 0px;
   font-size: 20px;
   display: block;
@@ -63,7 +64,6 @@ a.item-block-link{
 }
 
 .product-list-item-info{
-
     display: block;
     width: 100%;
     text-decoration: none
