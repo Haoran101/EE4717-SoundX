@@ -49,7 +49,7 @@ function get_order_items_with_product_info_by_order_id($db, $order_id){
 }
 
 function select_all_from_table($db, $table_name){
-    $query = "SELECT * FROM {table_name} WHERE 1";
+    $query = "SELECT * FROM {$table_name} WHERE 1";
     $result = $db -> query($query);
     $rows = array();
     while ($row = $result -> fetch_assoc()){

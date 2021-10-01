@@ -1,6 +1,12 @@
 <?php include_once '../db_conn.php'; 
     session_start();
 
+    if (!isset($_SESSION['user_id'])){
+        //If not login, head in to login page
+        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/login/"); 
+        exit();
+    }
+
     $account_query = "SELECT * FROM users WHERE user_id={$_SESSION['user_id']}";
     $user_result = $db -> query($account_query);
     $user_info = $user_result -> fetch_assoc();
