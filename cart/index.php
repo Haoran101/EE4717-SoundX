@@ -21,21 +21,30 @@
     if (count($_SESSION['cart'])==0){
         echo "No Items In cart, Please keep shopping.";
     } else {
+        echo '<div class = "cart-container">';
         echo '<form action="../checkout/" method="post">';
-        echo "<table>";
+        echo '<table class="cart-table">';
         foreach ($_SESSION['cart'] as $product){
             $info = get_details_by_id($db, $product);
             echo "<tr><td>";
-            echo "<img src='../img/product-snapshot/{$product}.png'>";
-            echo "<input type='checkbox' name='selected[]' value='{$product}'>";
-            echo $info['product_name'];
-            echo $info['price'];
+            echo '<div class="cart-item-row">';
+            echo "<input type='checkbox' name='selected[]' value='{$product}' id='cart-checkbox'>";
+            echo "<img src='../img/product-snapshot/{$product}.png' id='cart-img'>";
+            echo '<div id="product_name_quan">';
+            echo '<p>'.$info['product_name']'</p>';
+            echo '<div id="quan_field">';
             echo "<input type='number' name='items[{$product}]' value='1'>";
+            echo '</div></div>';
+            echo '<div>';
+            echo $info['price'];
+            //echo "<input type='number' name='items[{$product}]' value='1'>";
+            echo 'M./div></div>';
             echo "</td></tr>";
         }
         echo "</table>";
         echo '<input type="submit" value="Checkout">';
         echo '</form>';
+        echo '</div>'
     }
     ?>
     <?php include '../Elements/footer.php';?>
