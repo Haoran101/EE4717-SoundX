@@ -19,7 +19,7 @@
 <meta charset="utf-8">
 </head>
 <body>
-<div class="order_details_form" action="create_order.php" method="post">
+<div class="order_details_form" action="../create_order.php" method="post">
 <form>
     <h2>Delivery Address</h2>
     <input type="text" id="delivery_address_line_1" 
@@ -38,10 +38,6 @@
     <input type="radio" id="payment_paypal" name = "payment_method" value="paypal">
     <?php   
     //if no item is selected in cart, return to cart
-    if (!isset($_POST['selected'])){
-        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/"); 
-        exit();
-    } else {
         $order_id = generate_random_order_id();
         $total = 0;
         echo '<div class="order_confirmation">';
@@ -63,14 +59,13 @@
             $order_item_query[] = "INSERT INTO order_items (order_id, product_id, qty) VALUES ({$order_id}, {$selected_product}, {$qty})";
             $total += $subtotal;
         }
+        $_SESSION["order_item_query"] = $order_item_query;
         echo '<tr>';
         echo '<td colspan="3">Total</td>';
         echo "<td>{$total}</td>";
         echo '</tr>';
         echo '</table>';
         echo '</div>';
-        echo "<input type='text' hidden name='order_items' value='{$order_item_query}'>";
-    }
 ?>
     <input type="submit" value="Place Order">
 </form>
