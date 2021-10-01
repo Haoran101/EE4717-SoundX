@@ -26,32 +26,62 @@
     ?>
     <h1>Order Details</h1>
         <table>
-            <tr>
-                <td>Order #<?php echo $order_id; ?></td>
-            </tr>
-            <tr>
-                <td>Created Time: <?php echo $order_details['create_time']; ?></td>
-            </tr>
-            <tr>
-                <td>
+            <tr><td><!-- order id row -->
+                Order #<?php echo $order_id; ?>
+            </td></tr>
+            <tr><td><!-- create time row -->
+                 Created Time: <?php echo $order_details['create_time']; ?>
+            </td></tr>
+            <tr><td><!-- items row, contains items table -->
                     Items
                     <table>
                         <tr>
                             <td></td>
                             <td></td>
                             <td>Qty</td>
-                            <td>Total</td>
+                            <td>Price</td>
                             <td>Subtotal</td>
                         </tr>
                         <?php 
+                            $total = 0;
                             foreach($order_items as $item){
                                 echo "<tr>";
+                                echo "<td><img src='../img/product-snapshot/{$item['product_id']}.png'></td>";//image
+                                echo "<td>{$item['product_name']}</td>";//product name
+                                $qty = sprintf('%0.2f', $item['qty']);
+                                echo "<td>{$qty}</td>";//Qty
+                                $price =  sprintf('%0.2f', $item['price']);
+                                echo "<td>\${$price}</td>";//Price
+                                $subtotal = sprintf('%0.2f', $item['qty'] * $item['price']);
+                                $total += $item['qty'] * $item['price'];
+                                echo "<td>\${$subtotal}</td>";//Subtotal
                                 echo "</tr>";
                             }
                         ?>
                     </table>
-                </td>
-            </tr>
+            </td></tr>
+            <tr><td><!-- total row -->
+                Total <?php 
+                echo "\$";
+                echo sprintf('%0.2f', $total); ?>
+            </td></tr>
+            <tr><td><!-- delivery information row -->
+                Delivery Information<br>
+                <?php
+                echo "Name : {$order_details['receiver_name']}<br>";
+                echo "Contact No. : {$order_details['receiver_contact']}<br>";
+                echo "Address<br>";
+                echo "{$order_details['delivery_address_line_1']}<br>";
+                if (strlen($order_details['delivery_address_line_2'] > 0)){
+                    //if delivery address line 2 is set
+                    echo "{$order_details['delivery_address_line_2']}        ";
+                }
+                echo "{$order_details['zip_code']}<br>";
+                if ($order_details['track_number'] != NULL){
+                    echo "Track Number: {$order_details['track_number']}";
+                }
+                ?>
+            </td></tr>
         </table>
     </body>
     </html>
