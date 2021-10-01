@@ -5,10 +5,14 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Cart</title>
-<meta charset="utf-8">
+    <title>Cart</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/cart.css"/>
+    <link rel="stylesheet" href="../css/elements.css"/>
 </head>
+
 <body>
     <?php include '../Elements/nav_bar.php';?>
     <div class="item-cart-title">
@@ -37,4 +41,5 @@
     ?>
     <?php include '../Elements/footer.php';?>
 </body>
+
 </html>

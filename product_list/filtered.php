@@ -4,7 +4,7 @@
 <head>
     <title>Details</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/product-list-style.css">
+    <link rel="stylesheet" href="../css/product-list-style.css"/>
     <link rel="stylesheet" href="../css/elements.css" />
 </head>
 
@@ -128,13 +128,11 @@
     $result_arr = get_product_list_by_query($db, $query);
 
     echo '<div class="product-result-title">RESULTS</div>'; 
-
+	
+	//if no result is available
     if (empty($result_arr)){
         echo '<div style="display: flex; justify-content: center;"><img src="../img/no_result.png" style="width:500px;"></div>';
     }
-
-    
-    //if no result is available
         
     //echo '<div><img src="../img/no_result.png" style="margin: 50px auto 0; width: 100%; height=auto;"></div>';
     else{
