@@ -5,6 +5,7 @@
 
     $order_item_query = array();
 
+    //generate a random 8 digit order id nubmer
     function generate_random_order_id(){
         $rand_number = rand(1, 99999999);
         $order_id = str_pad($rand_number, 8, '0', STR_PAD_LEFT);
@@ -19,13 +20,13 @@
 <meta charset="utf-8">
 </head>
 <body>
-<div class="order_details_form" action="../create_order.php" method="post">
-<form>
+<div class="order_details_form">
+<form name="checkout" action="create_order.php" method="post">
     <h2>Delivery Address</h2>
     <input type="text" id="delivery_address_line_1" 
         name = "delivery_address_line_1" placeholder="Address Line 1" required>
     <input type="text" id="delivery_address_line_2" 
-        name = "delivery_address_line_2" placeholder="Address Line 2" required>
+        name = "delivery_address_line_2" placeholder="Address Line 2">
     <h2>Postal Code</h2>
     <input type="text" id="zip_code" name = "zip_code" required>
     <h2>Name</h2>
@@ -36,8 +37,11 @@
     <input type="radio" id="payment_visa" name = "payment_method" value="visa">
     <input type="radio" id="payment_mastercard" name = "payment_method" value="mastercard">
     <input type="radio" id="payment_paypal" name = "payment_method" value="paypal">
-    <?php   
-    //if no item is selected in cart, return to cart
+    <?php
+    if (!isset($_POST['selected'])){
+        //no items selected in cart
+        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/");
+    } else {
         $order_id = generate_random_order_id();
         $total = 0;
         echo '<div class="order_confirmation">';
@@ -59,6 +63,7 @@
             $order_item_query[] = "INSERT INTO order_items (order_id, product_id, qty) VALUES ({$order_id}, {$selected_product}, {$qty})";
             $total += $subtotal;
         }
+        $_SESSION["order_id"] = $order_id;
         $_SESSION["order_item_query"] = $order_item_query;
         echo '<tr>';
         echo '<td colspan="3">Total</td>';
@@ -66,6 +71,7 @@
         echo '</tr>';
         echo '</table>';
         echo '</div>';
+    }
 ?>
     <input type="submit" value="Place Order">
 </form>
