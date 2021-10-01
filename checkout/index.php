@@ -7,32 +7,46 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Checkout</title>
-<meta charset="utf-8">
+    <title>Checkout</title>
+    <meta charset="utf-8">
 </head>
+
 <body>
-<div class="order_details_form">
-<form>
-    <h2>Delivery Address</h2>
-    <input type="text" id="delivery_address_line_1" 
-        name = "delivery_address_line_1" placeholder="Address Line 1" required>
-    <input type="text" id="delivery_address_line_2" 
-        name = "delivery_address_line_2" placeholder="Address Line 2" required>
-    <h2>Postal Code</h2>
-    <input type="text" id="zip_code" name = "zip_code" required>
-    <h2>Name</h2>
-    <input type="text" id="receiver_name" name = "receiver_name" required>
-    <h2>Contact No.</h2>
-    <input type="tel" id="receiver_contact" name = "receiver_contact" required>
-    <h2>Payment Method</h2>
-    <input type="radio" id="payment_visa" name = "payment_method" value="visa">
-    <input type="radio" id="payment_mastercard" name = "payment_method" value="mastercard">
-    <input type="radio" id="payment_paypal" name = "payment_method" value="paypal">
-    <input type="submit" value="Place Order">
-</form>
-</div>
-<?php   
+    <div class="order_details_form-right">
+        <form>
+            <div id="address-field">
+                <h2>Delivery Address</h2>
+                <input type="text" id="delivery_address_line_1" name="delivery_address_line_1"
+                    placeholder="Address Line 1" required>
+                <input type="text" id="delivery_address_line_2" name="delivery_address_line_2"
+                    placeholder="Address Line 2" required>
+                <h2>Postal Code</h2>
+                <input type="text" id="zip_code" name="zip_code" required>
+            </div>
+            <div id="receiver-info">
+                <div id="reciver-name">
+                    <h2>Name</h2>
+                    <input type="text" id="receiver_name" name="receiver_name" required>
+                </div>
+                <div id="receiver-contact">
+                    <h2>Contact No.</h2>
+                    <input type="tel" id="receiver_contact" name="receiver_contact" required>
+                </div>
+            </div>
+            <div class="order-payment-left">
+                <h2>Payment Method</h2>
+                <div id="payment-selector">
+                    <input type="radio" id="payment_visa" name="payment_method" value="visa">
+                    <input type="radio" id="payment_mastercard" name="payment_method" value="mastercard">
+                    <input type="radio" id="payment_paypal" name="payment_method" value="paypal">
+                </div>
+                <input type="submit" value="Place Order">
+            </div>
+        </form>
+    </div>
+    <?php   
     //if no item is selected in cart, return to cart
     if (!isset($_POST['selected'])){
         header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/"); 
@@ -48,10 +62,10 @@
             $qty = $_POST['items'][$selected_product];
             $info = get_details_by_id($db, $selected_product);
             $product_name = $info['product_name'];
-            echo "<td>{$product_name}</td>";
-            echo "<td>{$qty}</td>";
+            echo "<td style='width=50%'>{$product_name}</td>";
+            echo "<td style='width=20%'>{$qty}</td>";
             $price = $info['price'];
-            echo "<td>{$price}</td>";
+            echo "<td style='width=20%'>{$price}</td>";
             $subtotal = (float) $price * (float) $qty;
             echo "<td>{$subtotal}</td>";
             echo '</tr>';
@@ -59,12 +73,13 @@
             $total += $subtotal;
         }
         echo '<tr>';
-        echo '<td colspan="3">Total</td>';
-        echo "<td>{$total}</td>";
+        echo '<td colspan="2" id="order-total-amount">Total</td>';
+        echo "<td id='order-total-amount-num'>{$total}</td>";
         echo '</tr>';
         echo '</table>';
         echo '</div>';
     }
 ?>
 </body>
+
 </html>

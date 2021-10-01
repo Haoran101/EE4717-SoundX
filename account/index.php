@@ -1,10 +1,9 @@
 <?php include_once '../db_conn.php'; 
     session_start();
 
-    $account_query = "SELECT * FROM users WHERE user_id={$_SESSION["user_id"]}";
+    $account_query = "SELECT * FROM users WHERE user_id={$_SESSION['user_id']}";
     $user_result = $db -> query($account_query);
     $user_info = $user_result -> fetch_assoc();
-    //var_dump($user_info);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,20 +33,28 @@
         <div class="right-nav-column">
             <div id="user-info-text">
                 <h2>Name</h2>
-                <?php echo '<p>'.ucwords($user_info['first_name']).' '.ucwords($user_info['last_name']).'</p>'; ?>
+                <p>
+                <?php echo ucwords($user_info['first_name']).' '.ucwords($user_info['last_name']); ?>
+                </p>
                 <hr>
-                <h2>Email</h2><?php echo '<p>'.strtolower($user_info['email']).'</p>'; ?>
+                <h2>Email</h2>
+                <p>
+                <?php echo strtolower($user_info['email']); ?>
+</p>
                 <hr>
-                <h2>Contact</h2><?php echo '<p>'.strtolower($user_info['contact']).'</p>'; ?>
+                <h2>Contact</h2>
+                <p>
+                <?php echo strtolower($user_info['contact']); ?>
+</p>
                 <hr>
             </div>
             <div>
                 <form action='logout.php'>
                     <input type='submit' value='Log Out'>
+                </form>
             </div>
         </div>
 
-        </form>
     </div>
     <?php include '../Elements/footer.php';?>
 </body>
