@@ -1,0 +1,135 @@
+body{
+    min-width: 1300px;
+}
+
+.item-cart-title{
+    display: block;
+    padding: 40px 80px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    left:0;
+}
+
+.cart-container{
+    display:flex;
+    justify-content: center;
+    /*min-width: 1300px;*/
+}
+
+.cart-table{
+    display: block;
+}
+
+.cart-table td{
+    border-bottom: 1px solid #999;
+}
+
+.cart-row{
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    padding: 0;
+}
+
+.cart-img-container{
+    margin:0 60px;
+    display: flex;
+    width: 300px;
+    justify-content:center;
+}
+
+
+#product_name_quan{
+    display: block;
+    margin-left: 60px;
+}
+
+#product_name_quan p{
+    display: block;
+    margin: 0px;
+    width: 550px;
+    height: 60px;
+    line-height: 1.5;
+	font-family: Gotham,Verdana,sans-serif;
+    font-style: normal;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+
+#cart-checkbox{
+    display: block;
+}
+
+#cart-img{
+    display: block;
+    height:100px;
+    width:fit-content;
+    overflow:hidden;    
+}
+
+#quan_field{
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#price-field{
+    display: block;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type=checkbox]:checked, input[type=checkbox]{
+    cursor: pointer;
+    width: 30px;
+    height: 30px; 
+    margin: 20px;
+}
+
+input[type=checkbox]{
+    background-color:darkgrey;
+}
+
+input[type=checkbox]:checked {
+    background-color:#1E80EF;
+}
+
+input[type=number]{
+    height: 40px;
+    width:80px;
+    margin-left: 10px;
+    border: 0.8px solid;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 0.6;
+    height:40px;
+    width: 10px;
+    padding: 0 10px;
+}
+
+input[type=submit] {
+    width: 250px;
+    height: 50px;
+    float:right;
+    margin:40px 0 80px;
+    background-color: #4CAF50;
+    color: white;
+    border:none;
+    border-radius: 8px;
+    padding: auto;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+input[type=submit]:hover {
+    background-color:ivory;
+  }
