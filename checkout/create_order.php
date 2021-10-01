@@ -9,7 +9,7 @@
 
     //Step 1: add order, items into order_items table
     foreach($_SESSION["order_item_query"] as $query){
-        echo $db->query($query);
+        $order_item_table_res = $db->query($query);
     }
 
     //Step 2: add order details into orders table
@@ -21,5 +21,12 @@
     $order_query.= "'{$_POST['zip_code']}', '{$_POST['receiver_name']}', '{$_POST['receiver_contact']}' ,";
     $order_query.= "'{$_POST['payment_method']}')";
 
-    echo $db -> query($order_query);
+    $orders_table_res = $db -> query($order_query);
+
+    $order_id = $_SESSION['order_id'];
+    unset($_SESSION['cart']);
+    unset($_SESSION['order_id']);
+    unset($_SESSION['order_item_query']);
+
+    header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/order_details/?id={$order_id}&from_checkout=true");
 ?>
