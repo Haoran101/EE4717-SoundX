@@ -15,10 +15,12 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Checkout</title>
-<meta charset="utf-8">
+    <title>Checkout</title>
+    <meta charset="utf-8">
 </head>
+
 <body>
 <div class="order_details_form">
 <form name="checkout" action="create_order.php" method="post">
@@ -53,10 +55,10 @@
             $qty = $_POST['items'][$selected_product];
             $info = get_details_by_id($db, $selected_product);
             $product_name = $info['product_name'];
-            echo "<td>{$product_name}</td>";
-            echo "<td>{$qty}</td>";
+            echo "<td style='width=50%'>{$product_name}</td>";
+            echo "<td style='width=20%'>{$qty}</td>";
             $price = $info['price'];
-            echo "<td>{$price}</td>";
+            echo "<td style='width=20%'>{$price}</td>";
             $subtotal = (float) $price * (float) $qty;
             echo "<td>{$subtotal}</td>";
             echo '</tr>';
@@ -66,8 +68,8 @@
         $_SESSION["order_id"] = $order_id;
         $_SESSION["order_item_query"] = $order_item_query;
         echo '<tr>';
-        echo '<td colspan="3">Total</td>';
-        echo "<td>{$total}</td>";
+        echo '<td colspan="2" id="order-total-amount">Total</td>';
+        echo "<td id='order-total-amount-num'>{$total}</td>";
         echo '</tr>';
         echo '</table>';
         echo '</div>';
@@ -77,4 +79,5 @@
 </form>
 <div>
 </body>
+
 </html>

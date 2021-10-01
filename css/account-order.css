@@ -1,0 +1,85 @@
+body{
+    min-width: 1300px;
+    display: block;
+    margin: auto;
+}
+
+.main-content{
+    display:flex;
+    justify-content: center;
+    min-width: 1300px;
+    margin: 100px 0;
+}
+
+.left-nav-column{
+    display: block;
+    width:200px;
+    height:500px;
+    padding-top: 50px;
+    background-color: rgb(227, 235, 245);
+}
+
+.right-nav-column{
+    display: block;
+    width: 800px;
+    height:500px;
+    padding-top: 50px;
+    background-color: rgb(241, 243, 245);
+}
+
+#user-info-text{
+    margin: 0 100px;
+}
+
+#user-info-text h2{
+    margin-bottom: 10px;
+}
+
+#user-info-text p{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top:0;
+}
+
+#account, #order{
+    display: block;
+    margin: 20px 40px 40px 0;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#account a:link, #order a:link{
+    text-decoration: none;
+    color: rgb(36, 46, 66);
+}
+
+#account a:hover, #order a:hover{
+    text-decoration: none;
+    color: rgba(85, 101, 134, 80);
+}
+
+hr{
+    margin:10px 0 40px 0;
+    background-color:slategray;
+    height: 0.4px;
+    border-width:0;
+}
+
+input[type=submit] {
+    width: 140px;
+    height: 40px;
+    margin-top:10px;
+    float: right;
+    margin-right: 100px;
+    background-color: rgb(165, 174, 184);
+    color: white;
+    border:none;
+    border-radius: 8px;
+    padding: auto;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+  }
