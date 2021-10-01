@@ -3,7 +3,14 @@
     include_once '../db_conn.php';
     include_once '../query_utils.php';
 
-    $order_query = array();
+    $order_item_query = array();
+
+    function generate_random_order_id(){
+        $rand_number = rand(1, 99999999);
+        $order_id = str_pad($rand_number, 8, '0', STR_PAD_LEFT);
+        echo $order_id;
+        return $order_id;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +19,7 @@
 <meta charset="utf-8">
 </head>
 <body>
-<div class="order_details_form">
+<div class="order_details_form" action="create_order.php" method="post">
 <form>
     <h2>Delivery Address</h2>
     <input type="text" id="delivery_address_line_1" 
@@ -29,15 +36,13 @@
     <input type="radio" id="payment_visa" name = "payment_method" value="visa">
     <input type="radio" id="payment_mastercard" name = "payment_method" value="mastercard">
     <input type="radio" id="payment_paypal" name = "payment_method" value="paypal">
-    <input type="submit" value="Place Order">
-</form>
-<div>
-<?php   
+    <?php   
     //if no item is selected in cart, return to cart
     if (!isset($_POST['selected'])){
         header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/"); 
         exit();
     } else {
+        $order_id = generate_random_order_id();
         $total = 0;
         echo '<div class="order_confirmation">';
         echo '<h2>Order Details</h2>';
@@ -55,7 +60,7 @@
             $subtotal = (float) $price * (float) $qty;
             echo "<td>{$subtotal}</td>";
             echo '</tr>';
-            $order_query[] = "INSERT INTO order_items (order_id, product_id, qty) VALUES (<placeholder>, {$selected_product}, {$qty})";
+            $order_item_query[] = "INSERT INTO order_items (order_id, product_id, qty) VALUES ({$order_id}, {$selected_product}, {$qty})";
             $total += $subtotal;
         }
         echo '<tr>';
@@ -64,7 +69,11 @@
         echo '</tr>';
         echo '</table>';
         echo '</div>';
+        echo "<input type='text' hidden name='order_items' value='{$order_item_query}'>";
     }
 ?>
+    <input type="submit" value="Place Order">
+</form>
+<div>
 </body>
 </html>
