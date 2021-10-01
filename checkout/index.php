@@ -3,7 +3,15 @@
     include_once '../db_conn.php';
     include_once '../query_utils.php';
 
-    $order_query = array();
+    $order_item_query = array();
+
+    //generate a random 8 digit order id nubmer
+    function generate_random_order_id(){
+        $rand_number = rand(1, 99999999);
+        $order_id = str_pad($rand_number, 8, '0', STR_PAD_LEFT);
+        echo $order_id;
+        return $order_id;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,44 +22,29 @@
 </head>
 
 <body>
-    <div class="order_details_form-right">
-        <form>
-            <div id="address-field">
-                <h2>Delivery Address</h2>
-                <input type="text" id="delivery_address_line_1" name="delivery_address_line_1"
-                    placeholder="Address Line 1" required>
-                <input type="text" id="delivery_address_line_2" name="delivery_address_line_2"
-                    placeholder="Address Line 2" required>
-                <h2>Postal Code</h2>
-                <input type="text" id="zip_code" name="zip_code" required>
-            </div>
-            <div id="receiver-info">
-                <div id="reciver-name">
-                    <h2>Name</h2>
-                    <input type="text" id="receiver_name" name="receiver_name" required>
-                </div>
-                <div id="receiver-contact">
-                    <h2>Contact No.</h2>
-                    <input type="tel" id="receiver_contact" name="receiver_contact" required>
-                </div>
-            </div>
-            <div class="order-payment-left">
-                <h2>Payment Method</h2>
-                <div id="payment-selector">
-                    <input type="radio" id="payment_visa" name="payment_method" value="visa">
-                    <input type="radio" id="payment_mastercard" name="payment_method" value="mastercard">
-                    <input type="radio" id="payment_paypal" name="payment_method" value="paypal">
-                </div>
-                <input type="submit" value="Place Order">
-            </div>
-        </form>
-    </div>
-    <?php   
-    //if no item is selected in cart, return to cart
+<div class="order_details_form">
+<form name="checkout" action="create_order.php" method="post">
+    <h2>Delivery Address</h2>
+    <input type="text" id="delivery_address_line_1" 
+        name = "delivery_address_line_1" placeholder="Address Line 1" required>
+    <input type="text" id="delivery_address_line_2" 
+        name = "delivery_address_line_2" placeholder="Address Line 2">
+    <h2>Postal Code</h2>
+    <input type="text" id="zip_code" name = "zip_code" required>
+    <h2>Name</h2>
+    <input type="text" id="receiver_name" name = "receiver_name" required>
+    <h2>Contact No.</h2>
+    <input type="tel" id="receiver_contact" name = "receiver_contact" required>
+    <h2>Payment Method</h2>
+    <input type="radio" id="payment_visa" name = "payment_method" value="visa">
+    <input type="radio" id="payment_mastercard" name = "payment_method" value="mastercard">
+    <input type="radio" id="payment_paypal" name = "payment_method" value="paypal">
+    <?php
     if (!isset($_POST['selected'])){
-        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/"); 
-        exit();
+        //no items selected in cart
+        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/");
     } else {
+        $order_id = generate_random_order_id();
         $total = 0;
         echo '<div class="order_confirmation">';
         echo '<h2>Order Details</h2>';
@@ -69,9 +62,11 @@
             $subtotal = (float) $price * (float) $qty;
             echo "<td>{$subtotal}</td>";
             echo '</tr>';
-            $order_query[] = "INSERT INTO order_items (order_id, product_id, qty) VALUES (<placeholder>, {$selected_product}, {$qty})";
+            $order_item_query[] = "INSERT INTO order_items (order_id, product_id, qty) VALUES ({$order_id}, {$selected_product}, {$qty})";
             $total += $subtotal;
         }
+        $_SESSION["order_id"] = $order_id;
+        $_SESSION["order_item_query"] = $order_item_query;
         echo '<tr>';
         echo '<td colspan="2" id="order-total-amount">Total</td>';
         echo "<td id='order-total-amount-num'>{$total}</td>";
@@ -80,6 +75,9 @@
         echo '</div>';
     }
 ?>
+    <input type="submit" value="Place Order">
+</form>
+<div>
 </body>
 
 </html>
