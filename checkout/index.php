@@ -31,7 +31,7 @@
     <input type="radio" id="payment_paypal" name = "payment_method" value="paypal">
     <input type="submit" value="Place Order">
 </form>
-<div>
+</div>
 <?php   
     //if no item is selected in cart, return to cart
     if (!isset($_POST['selected'])){
