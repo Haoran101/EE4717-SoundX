@@ -21,8 +21,8 @@ include_once '../query_utils.php';
 
 <body>
     <?php include '../Elements/nav_bar.php';?>
-    <div class="main-content">
-        <div class="left-nav-column">
+    <div class="main-content-order">
+        <div class="left-nav-column-order">
             <div id="account">
                 <a href="../account/">
                     <span>ACCOUNT</span>
@@ -34,20 +34,23 @@ include_once '../query_utils.php';
                 </a>
             </div>
         </div>
-        <div class="right-nav-column">
-            <div id="user-info-text">
+        <div class="right-nav-column-order">
+            <div id="order-content">
 
-<?php
-    $curr_user = $_SESSION['user_id'];
-    $query_orders = "SELECT * FROM orders WHERE user_id = {$curr_user} ORDER BY create_time DESC";
-    @$order_result = $db -> query($query_orders);
+                <?php
+                    $curr_user = $_SESSION['user_id'];
+                    $query_orders = "SELECT * FROM orders WHERE user_id = {$curr_user} ORDER BY create_time DESC";
+                    @$order_result = $db -> query($query_orders);
+                    echo '<div id="order-item-table">'
+                    while ($row = $order_result -> fetch_assoc()){
+                        $order_id = $row['order_id'];
+                        $order_items = get_order_items_with_product_info_by_order_id($db, $order_id);
+                        order_item_table($order_id, $row, $order_items);
+                        echo "<div id='order-view-details'>"
+                        echo "<a href='../order_details/?id={$order_id}'>View Details >></a></div>";
+                    }
+                    echo '</div>'
+                ?> 
 
-    while ($row = $order_result -> fetch_assoc()){
-        $order_id = $row['order_id'];
-        $order_items = get_order_items_with_product_info_by_order_id($db, $order_id);
-        order_item_table($order_id, $row, $order_items);
-        echo "<a href='../order_details/?id={$order_id}'>View Details >></a>";
-    }
-?> 
             </div>
         </div>
