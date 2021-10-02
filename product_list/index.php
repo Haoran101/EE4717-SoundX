@@ -51,27 +51,27 @@
                         <div class="filter-title">TYPE</div>
                         <div class="filter-checkbox-list">
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Wireless" id="type1" value="true">
+                                <input type="checkbox" name="Wireless" id="Wireless" value="true">
                                 <label for="type1">Wireless</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Wired" id="type2" value="true">
+                                <input type="checkbox" name="Wired" id="Wired" value="true">
                                 <label for="type2">Wired</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Earbuds" id="type3" value="true">
+                                <input type="checkbox" name="Earbuds" id="Earbuds" value="true">
                                 <label for="type3">Earbuds</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Gaming" id="type4" value="true">
+                                <input type="checkbox" name="Gaming" id="Gaming" value="true">
                                 <label for="type4">Gaming</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Sport" id="type5" value="true">
+                                <input type="checkbox" name="Sport" id="Sport" value="true">
                                 <label for="type5">Sport</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Bluetooth" id="type6" value="true">
+                                <input type="checkbox" name="Bluetooth" id="Bluetooth" value="true">
                                 <label for="type6">Bluetooth</label>
                             </div>
                         </div>
@@ -88,6 +88,7 @@
                         <label for="max_price">To</label>
                         <input type="text" name="max_price" onClick="this.select();" id="max_price" size="2" value="1000"
                             onchange="validateNumberInput(this);">
+                    <div><p id="alert-msg"></p></div>
                     </div>
                 </div>
                 <input type="submit" value="Apply Filters">
