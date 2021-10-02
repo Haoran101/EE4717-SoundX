@@ -15,7 +15,6 @@
     function generate_random_order_id(){
         $rand_number = rand(1, 99999999);
         $order_id = str_pad($rand_number, 8, '0', STR_PAD_LEFT);
-        echo $order_id;
         return $order_id;
     }
 ?>
