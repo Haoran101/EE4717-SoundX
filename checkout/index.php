@@ -3,13 +3,18 @@
     include_once '../db_conn.php';
     include_once '../query_utils.php';
 
+    if (!isset($_SESSION['user_id'])){
+        //If already login, jump to home page directly
+        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/login/"); 
+        exit();
+    }
+
     $order_item_query = array();
 
     //generate a random 8 digit order id nubmer
     function generate_random_order_id(){
         $rand_number = rand(1, 99999999);
         $order_id = str_pad($rand_number, 8, '0', STR_PAD_LEFT);
-        echo $order_id;
         return $order_id;
     }
 ?>
