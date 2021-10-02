@@ -28,7 +28,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href="../product_list/filtered.php?brand%5B%5D=1">
+								href="../product_list/?brand%5B%5D=1">
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $brands[0]; ?></div>
 							</a>
@@ -37,7 +37,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href="../product_list/filtered.php?brand%5B%5D=2">
+								href="../product_list/?brand%5B%5D=2">
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $brands[1]; ?></div>
 							</a>
@@ -46,7 +46,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href="../product_list/filtered.php?brand%5B%5D=3">
+								href="../product_list/?brand%5B%5D=3">
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>>
 								<div class="font-item"><?php echo $brands[2]; ?></div>
 							</a>
@@ -55,7 +55,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href="../product_list/filtered.php?brand%5B%5D=4">
+								href="../product_list/?brand%5B%5D=4">
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $brands[3]; ?></div>
 							</a>
@@ -64,7 +64,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href="../product_list/filtered.php?brand%5B%5D=5">
+								href="../product_list/?brand%5B%5D=5">
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $brands[4]; ?></div>
 							</a>
@@ -83,7 +83,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href=<?php echo "../product_list/filtered.php?{$types[0]}=true"; ?>>
+								href=<?php echo "../product_list/?{$types[0]}=true"; ?>>
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[0]; ?></div>
 							</a>
@@ -92,7 +92,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href=<?php echo "../product_list/filtered.php?{$types[1]}=true"; ?>>
+								href=<?php echo "../product_list/?{$types[1]}=true"; ?>>
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[1]; ?></div>
 							</a>
@@ -101,7 +101,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href=<?php echo "../product_list/filtered.php?{$types[2]}=true"; ?>>
+								href=<?php echo "../product_list/?{$types[2]}=true"; ?>>
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[2]; ?></div>
 							</a>
@@ -110,7 +110,7 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 					<li class="subnav-item">
 						<div class="item-block">
 							<a class="item-block-link"
-								href=<?php echo "../product_list/filtered.php?{$types[3]}=true"; ?>>
+								href=<?php echo "../product_list/?{$types[3]}=true"; ?>>
 								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[3]; ?></div>
 							</a>

@@ -1,3 +1,4 @@
+
 function validateNumberInput(new_input){
     var isdecimal = new_input.value.search(/^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$/); 
     if (isdecimal != 0){
@@ -14,4 +15,8 @@ function validateNumberInput(new_input){
                 new_input.value = 1000;
             }
     }
+}
+
+if (filter_get !== undefined){
+    console.log('captured!');
 }
