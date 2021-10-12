@@ -35,7 +35,7 @@
             echo '<p>'.$info['product_name'].'</p>';
             echo '<div id="quan_field">';
             echo '<label for="brand2">Quantity</label>';
-            echo "<input type='number' name='items[{$product}]' value='1'>";
+            echo "<input type='number' name='items[{$product}]' min='1' value='1' max='{$info['stock']}'>";
             echo '</div></div>';
             echo '<div id="price-field">';
             echo '<p>'.'$'.$info['price'].'</p>';

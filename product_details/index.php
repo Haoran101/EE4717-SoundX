@@ -36,6 +36,7 @@ $added_in_cart = in_array($product_id, $_SESSION['cart']);
             <h1><?php echo $row["product_name"]; ?></h1>
             <h2><?php echo $row["short_description"]; ?></h2>
             <p class="price"><strong>$<?php echo $row["price"]; ?></strong></p>
+            <p class="stock">Stock Left: <?php echo $row["stock"]; ?></p>
             <div class="button-group">
                 <div id="add-to-cart-button">
                     <form action="add_to_cart.php" method="post">
@@ -50,10 +51,13 @@ $added_in_cart = in_array($product_id, $_SESSION['cart']);
                     </form>
                 </div>
                 <div id="buy-now-button">
-                    <button id="buy-button">Buy Now</button>
+                <form id="buyNow" action="../checkout/index.php" method="post">
+                    <input type="hidden" id="buy-now-select-this" name="selected[]" value="<?php echo $product_id; ?>">
+                    <input type="hidden" id="buy-now-qty-one" name="items[<?php echo $product_id; ?>]" value="1">
+                    <button id="buy-button" onclick="buyNow.submit();">Buy Now</button>
+                </form>
                 </div>
             </div>
-
         </div>
     </div>
     </div>
@@ -84,6 +88,10 @@ $added_in_cart = in_array($product_id, $_SESSION['cart']);
     </div>
     <?php include '../Elements/footer.php'; ?>
     <script type="text/javascript" src="productdetails.js"></script>
+    <?php if($row["stock"] == 0){
+                echo "<script> noStock(); </script>";
+            }
+    ?>
 </body>
 
 </html>

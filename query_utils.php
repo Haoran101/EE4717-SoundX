@@ -2,7 +2,7 @@
 $product_table_column = array("product_id", "product_name", "short_description", "no_pictures", "brand_id" , "price", "wireless", "wired", "earbuds", "gaming", "sport", "bluetooth", "url",  "description", "specification");
 
 function get_details_by_id($db, $product_id){
-    $query = 'SELECT * FROM product
+    $query = 'SELECT * FROM products
             WHERE product_id ='.$product_id;
     $result = $db -> query($query);
     $row = $result -> fetch_assoc();
@@ -38,8 +38,8 @@ function get_order_items_by_order_id($db, $order_id){
 }
 
 function get_order_items_with_product_info_by_order_id($db, $order_id){
-    $query = "SELECT order_items.order_id, order_items.product_id, order_items.qty, product.product_name, product.price";
-    $query.= " FROM order_items LEFT JOIN product ON order_items.product_id = product.product_id";
+    $query = "SELECT order_items.order_id, order_items.product_id, order_items.qty, products.product_name, products.price";
+    $query.= " FROM order_items LEFT JOIN product ON order_items.product_id = products.product_id";
     $query.= " WHERE order_items.order_id ={$order_id}";
     $result = $db -> query($query);
     while ($row = $result -> fetch_assoc()){
