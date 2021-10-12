@@ -39,7 +39,7 @@ function get_order_items_by_order_id($db, $order_id){
 
 function get_order_items_with_product_info_by_order_id($db, $order_id){
     $query = "SELECT order_items.order_id, order_items.product_id, order_items.qty, products.product_name, products.price";
-    $query.= " FROM order_items LEFT JOIN product ON order_items.product_id = products.product_id";
+    $query.= " FROM order_items LEFT JOIN products ON order_items.product_id = products.product_id";
     $query.= " WHERE order_items.order_id ={$order_id}";
     $result = $db -> query($query);
     while ($row = $result -> fetch_assoc()){

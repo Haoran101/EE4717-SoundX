@@ -16,7 +16,7 @@ INSERT INTO brand (brand_id, brand_name) VALUES
 DROP TABLE IF EXISTS orders;
 CREATE TABLE IF NOT EXISTS orders(
    order_id                INT  NOT NULL PRIMARY KEY
-  ,create_time             DATETIME 
+  ,create_time             TIMESTAMP default CURRENT_TIMESTAMP
   ,user_id                 INT  NOT NULL
   ,status                  INT 
   ,delivery_address_line_1 VARCHAR(100)

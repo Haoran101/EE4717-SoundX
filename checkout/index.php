@@ -8,12 +8,14 @@
         header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/login/"); 
         exit();
     }
-
-    $order_item_query = array();
-
     //generate a random 8 digit order id nubmer
-    function generate_random_order_id(){
-        $rand_number = rand(1, 99999999);
+    function generate_random_order_id($db){
+        do {
+            $rand_number = rand(1, 99999999);
+            $check_repeat = "SELECT * FROM orders WHERE order_id=".$rand_number;
+            $res = $db->query($check_repeat);
+            $num_row = $res->num_rows;
+        } while ($num_row > 0);
         $order_id = str_pad($rand_number, 8, '0', STR_PAD_LEFT);
         return $order_id;
     }
@@ -49,8 +51,9 @@
         //no items selected in cart
         header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/");
     } else {
-        $order_id = generate_random_order_id();
+        $order_id = generate_random_order_id($db);
         $total = 0;
+        $items = array();
         echo '<div class="order_confirmation">';
         echo '<h2>Order Details</h2>';
         echo '<table>';
@@ -58,6 +61,7 @@
         foreach($_POST['selected'] as $selected_product){
             echo '<tr>';
             $qty = $_POST['items'][$selected_product];
+            $items[$selected_product] = $qty;
             $info = get_details_by_id($db, $selected_product);
             $product_name = $info['product_name'];
             echo "<td style='width=50%'>{$product_name}</td>";
@@ -67,11 +71,10 @@
             $subtotal = (float) $price * (float) $qty;
             echo "<td>{$subtotal}</td>";
             echo '</tr>';
-            $order_item_query[] = "INSERT INTO order_items (order_id, product_id, qty) VALUES ({$order_id}, {$selected_product}, {$qty})";
             $total += $subtotal;
         }
         $_SESSION["order_id"] = $order_id;
-        $_SESSION["order_item_query"] = $order_item_query;
+        $_SESSION["order_item"] = $items;
         echo '<tr>';
         echo '<td colspan="2" id="order-total-amount">Total</td>';
         echo "<td id='order-total-amount-num'>{$total}</td>";
