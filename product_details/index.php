@@ -21,7 +21,7 @@ $added_in_cart = in_array($product_id, $_SESSION['cart']);
     <div class="product-show">
         <div class="image-and-selector">
             <div class="main-img">
-                <img src=<?php echo"../img/product/{$product_id}-1.jpg"?> id="product_big_picture" />
+                <img src=<?php echo"../img/product/{$product_id}-1.jpg";?> id="product_big_picture" />
             </div>
             <div class="image-selector-small">
                 <?php $num_of_pictures = (int) $row["no_pictures"];

@@ -23,6 +23,17 @@
 
     $orders_table_res = $db -> query($order_query);
 
+    //Step 3: reduce current stock
+    foreach($_SESSION["order_item"] as $product_id => $qty){
+        $current_stock_query = "SELECT stock FROM products WHERE product_id={$product_id}";
+        $current_stock_res = $db->query($current_stock_query);
+        $current_stock_row = $current_stock_res->fetch_row();
+        $new_stock = $current_stock_row[0] - $qty;
+        $update_stock_query = "UPDATE products SET stock={$new_stock} WHERE product_id={$product_id}";
+        $db->query($update_stock_query);
+    }
+   
+
     $order_id = $_SESSION['order_id'];
     $new_cart = array();
     foreach($_SESSION["cart"] as $product_id){
