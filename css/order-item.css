@@ -1,0 +1,133 @@
+.status-bar-container{
+    display: block;
+    min-width: 1300px;
+}
+
+.index-order-detail-container{
+    display: block;
+    min-width: 1300px;
+}
+
+.order-table-main{
+    display: block;
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+.item-row-container{
+    display: block;
+    position: relative;
+    padding: 10px 20px;    
+}
+
+.item-row-container th{
+    display: flex;
+    height: 40px;   
+}
+
+.item-row-container td{
+    display: block;
+}
+
+.item-row{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+#img-container, #product-name-container, #qty-container, #price-container, #subtotal-container{
+    display: block;
+}
+
+#img-container{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+#order-img{
+    display: block;
+    height: 100px;
+    width: fit-content;
+    overflow: hidden;
+}
+
+#product-name-container{
+    display: block;
+    margin-left: 50px;
+    width: 500px;
+    height: fit-content;
+    text-align: left;
+}
+
+#product-name-container p{
+    line-height: 1.5;
+    font-family: Gotham,Verdana,sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#qty-container, #price-container, #subtotal-container{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#qty-container{
+    width:10%;
+    min-width:130px;
+}
+#price-container, #subtotal-container{
+    width:20%;
+    min-width: 260px;
+}
+
+#table-head-item,#table-head-qty,#table-head-price,#table-head-subtotal, #total-amount{
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+
+#table-head-item{
+    text-align: left;
+    padding-left: 30px;
+    width: 50%;
+    min-width:630px;
+}
+
+#table-head-qty{
+    text-align: center;
+    width: 10%;
+    min-width: 130px;
+}
+
+#table-head-price,#table-head-subtotal{
+    text-align: center;
+    width: 20%;
+    min-width: 260px;
+}
+
+#order-id-row{
+    display: block;
+    padding: 10px 40px;
+    font-size: 14px;
+}
+
+#total{
+    display: block;
+    text-align: left;
+}
+
+
+tr {
+    padding: 20px 50px;
+    display: block;
+}
+
+td, th{
+    border-bottom: 1px solid rgb(90, 90, 90);
+}
+

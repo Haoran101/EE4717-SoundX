@@ -20,6 +20,8 @@ body {
 
 .main-img{
     display: block;
+    padding: auto;
+    overflow:hidden;    
 }
 
 .image-selector-small{
@@ -39,6 +41,7 @@ body {
   width:600px;
   min-width: 600px;
     height:fit-content;
+    vertical-align: middle;
     overflow:hidden;    
     margin: auto;
 }
@@ -62,6 +65,11 @@ body {
 .price {
   font-size: 40px;
   margin-top: 30px;
+}
+
+.stock {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .button-group{

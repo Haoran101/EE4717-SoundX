@@ -1,7 +1,10 @@
 <?php include_once '../db_conn.php';
+include_once '../query_utils.php';
 
 $brands = array('Razer', 'Beats', 'Sony', 'SteelSeries', 'Bose');
 $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
+
+$brand = select_all_from_table($db, "brand");
 
 ?>
 <!DOCTYPE html>
@@ -25,51 +28,22 @@ $types = array('Wired', 'Wireless', 'Gaming', 'Sport');
 				<!--Here is something to display => brand-->
 				<!-- TODO: style the list -->
 				<ul class="nav-dropdown-item">
-					<li class="subnav-item">
-						<div class="item-block">
-							<a class="item-block-link"
-								href="../product_list/?brand%5B%5D=1">
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
-								<div class="font-item"><?php echo $brands[0]; ?></div>
+					<?php 
+					for ($i=0; $i<count($brand); $i++){
+						$brand_row = $brand[$i];
+						$brand_name = $brand_row['brand_name'];
+						$brand_id = $brand_row['brand_id'];
+						echo "<li class='subnav-item'>
+						<div class='item-block'>
+							<a class='item-block-link'
+								href='../product_list/?brand%5B%5D={$brand_id}'>
+								<div class='item-img'><img src='../img/brand/{$brand_id}.png' alt='SoundX' width='130px'></div>
+								<div class='font-item'>{$brand_name}</div>
 							</a>
 						</div>
-					</li>
-					<li class="subnav-item">
-						<div class="item-block">
-							<a class="item-block-link"
-								href="../product_list/?brand%5B%5D=2">
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
-								<div class="font-item"><?php echo $brands[1]; ?></div>
-							</a>
-						</div>
-					</li>
-					<li class="subnav-item">
-						<div class="item-block">
-							<a class="item-block-link"
-								href="../product_list/?brand%5B%5D=3">
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>>
-								<div class="font-item"><?php echo $brands[2]; ?></div>
-							</a>
-						</div>
-					</li>
-					<li class="subnav-item">
-						<div class="item-block">
-							<a class="item-block-link"
-								href="../product_list/?brand%5B%5D=4">
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
-								<div class="font-item"><?php echo $brands[3]; ?></div>
-							</a>
-						</div>
-					</li>
-					<li class="subnav-item">
-						<div class="item-block">
-							<a class="item-block-link"
-								href="../product_list/?brand%5B%5D=5">
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
-								<div class="font-item"><?php echo $brands[4]; ?></div>
-							</a>
-						</div>
-					</li>
+					</li>";
+					}
+					?>
 				</ul>
 			</div>
 		</div>

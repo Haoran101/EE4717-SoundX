@@ -3,3 +3,132 @@ body{
     display: block;
     margin: auto;
 }
+
+.order_details_form{
+    display: flex;
+    padding: 100px 0;
+    margin-left:150px;
+}
+
+.order_details_left_col{
+    display: inline-block;
+    width: 550px;
+    min-width: 550px;
+}
+
+.order_details_right_col{
+    display: inline-block;
+    width: 400px;
+    min-width: 400px;
+    margin-left: 150px;
+}
+
+.form_content{
+    display: flex;
+    align-items: flex-start;
+}
+.order_summary{
+    display: block;
+    height: 300px;
+    overflow: auto;
+    margin-bottom:50px;
+}
+
+.summary_table table{
+    display: block;
+    border-collapse: collapse;
+    border-spacing:0;
+}
+
+.payment{
+    display: block;
+    margin-bottom: 0px;
+}
+
+.payment_button{
+    height: 120px;
+}
+
+th {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    padding: 15px 10px 15px 10px;
+    background-color:rgb(185, 191, 197);
+}
+
+td{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    padding: 15px 10px 15px 10px;
+    border-bottom: solid 1pt rgb(54, 93, 133);
+}
+
+h1{
+    margin-bottom: 25px;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom:5px;
+}
+
+img{
+    height: 80px;
+    width: auto;
+    margin-right: 30px;    
+}
+
+[type=radio] { 
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+[type=radio] + img {
+    cursor: pointer;
+}
+  
+ [type=radio]:checked + img {
+    border: 5px solid rgb(216, 224, 247);
+}
+
+input[type="text"], input[type="tel"] {
+    cursor: text;
+    height: 20px;
+    width: 200px;
+    padding: 12px 15px;
+    border-width: 1px;
+    border-color:rgb(133, 133, 133);
+    border-radius: 10px;
+}
+
+
+#total_title, #total_amount{
+    background-color:rgb(229, 234, 238);
+    border: none;
+}
+
+
+input[type=submit] {
+    width: 180px;
+    height: 60px;
+    float: right;
+    margin-right: 20px;
+    background-color: rgb(0, 44, 95);
+    color: white;
+    border:none;
+    border-radius: 8px;
+    padding: auto;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+ input[type=submit]:hover{
+    background-color: rgb(118, 144, 173);
+ }
+

@@ -10,7 +10,7 @@
         exit();
     }
 
-    $order_id = $_GET{'id'};
+    $order_id = (int)$_GET['id'];
     $order_details = get_order_details_by_order_id($db, $order_id);
     $order_items = get_order_items_with_product_info_by_order_id($db, $order_id);
 ?>
@@ -52,7 +52,9 @@
     <h1>Order Details</h1>
         <!-- order items table -->
         <?php include 'item_in_order.php';
+        echo '<div class="index-order-detail-container">'
         order_item_table($order_id, $order_details, $order_items);
+        echo '</div>'
         ?>
             <tr><td><!-- delivery information row -->
                 Delivery Information<br>
