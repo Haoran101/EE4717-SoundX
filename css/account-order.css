@@ -14,15 +14,13 @@ body{
 .left-nav-column , .left-nav-column-order{
     display: block;
     width:200px;
-    height:500px;
     padding-top: 50px;
     background-color: rgb(227, 235, 245);
 }
 
-.right-nav-column, .left-nav-column-order{
+.right-nav-column{
     display: block;
     width: 800px;
-    height:500px;
     padding-top: 50px;
     background-color: rgb(241, 243, 245);
 }
