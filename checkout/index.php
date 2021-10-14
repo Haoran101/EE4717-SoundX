@@ -44,13 +44,15 @@
                 </div>
                 <div class="details_code">
                     <h2>Postal Code</h2>
-                    <input type="text" id="zip_code" name="zip_code" style="margin-bottom: 40px;"required>
+                    <input type="text" id="zip_code" name="zip_code" style="margin-bottom: 20px;"required>
+                    <div id="invalidZipCodeAlert" style="margin-bottom: 20px;"></div>
                 </div>
                 <div class="details_personal">
                     <h2>Name</h2>
                     <input type="text" id="receiver_name" name="receiver_name" required>
                     <h2>Contact No.</h2>
                     <input type="tel" id="receiver_contact" name="receiver_contact" required>
+                    <div style="margin-top: 25px;" id="invalidContactAlert"></div>
                 </div>
             </div>
             <div class="order_details_right_col">
@@ -106,25 +108,26 @@
                     <h1>Payment Method</h1>
                     <div class="payment_button">
                         <label>
-                            <input type="radio" id="payment_visa" name="payment_method" value="visa">
-                            <img src="../img/placeholder.png">
+                            <input type="radio" id="payment_visa" name="payment_method" value="visa" required>
+                            <img  src="../img/payment/visa.png">
                         </label>
                         <label>
                             <input type="radio" id="payment_mastercard" name="payment_method" value="mastercard">
-                            <img src="../img/placeholder.png">
+                            <img  src="../img/payment/mastercard.png">
                         </label>
                         <label>
                             <input type="radio" id="payment_paypal" name="payment_method" value="paypal">
-                            <img src="../img/placeholder.png">
+                            <img  src="../img/payment/paypal.png">
                         </label>
                     </div>
                 </div>
                 <div id="submit_button">
-                    <input type="submit" value="Place Order">
+                    <input id="checkout-button" type="submit" value="Place Order">
                 </div>
             </div>
         </form>
     </div>
+    <script src="checkout_validate.js"></script>
 </body>
 
 </html>

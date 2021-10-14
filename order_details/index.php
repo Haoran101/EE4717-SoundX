@@ -198,8 +198,9 @@
                     echo "{$order_details['delivery_address_line_2']}";
                 }
                 echo "{$order_details['zip_code']}</div>";
+                $track_number = (strlen($order_details['track_number'])>0)? $order_details['track_number'] : "Not Available Now";
                 if ($order_details['track_number'] == NULL){
-                    echo "<div id='track'><p class='title'>Track Number</p><p>{$order_details['track_number']}</p></div></div>";
+                    echo "<div id='track'><p class='title'>Track Number</p><p>{$track_number}</p></div></div>";
                 }
                 ?>
             </table>
