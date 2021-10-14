@@ -13,6 +13,18 @@
     $order_id = (int)$_GET['id'];
     $order_details = get_order_details_by_order_id($db, $order_id);
     $order_items = get_order_items_with_product_info_by_order_id($db, $order_id);
+
+    //order id not exists in database   
+    if (empty($order_details)){
+        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/orders/"); 
+        exit();
+    }
+
+    //order is not created by current user
+    if ($order_details['user_id'] !== $_SESSION['user_id']){
+        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/orders/"); 
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
