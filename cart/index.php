@@ -24,7 +24,9 @@
         echo '</div>';
     } else {
         echo '<div class = "cart-container">';
-        echo '<form action="../checkout/" method="post">';
+        echo '<form id="cart-form" action="../checkout/" method="post">';
+        echo "<input type='hidden' name='remove' value='false' id='removed-placeholder'>";
+        echo '<button id="remove-button" onclick="removeItemFromCart();">Remove</button>';
         echo '<table class="cart-table">';
         foreach ($_SESSION['cart'] as $product){
             $info = get_details_by_id($db, $product);
@@ -41,7 +43,6 @@
             echo '</div></div>';
             echo '<div id="price-field">';
             echo '<p>'.'$'.$info['price'].'</p>';
-            //echo "<input type='number' name='items[{$product}]' value='1'>";
             echo '</div></div>';
             echo "</td></tr>";
         }
@@ -52,6 +53,7 @@
     }
     ?>
     <?php include '../Elements/footer.php';?>
+    <script src="remove_cart.js"></script>
 </body>
 
 </html>
