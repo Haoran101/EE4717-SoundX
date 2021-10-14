@@ -154,5 +154,27 @@ body {
   font-size: 20px;
   font-weight: 500;
 }
-  
 
+/*alert*/
+.alert{
+  padding: 10px;
+  background-color: #fcaca64d;
+  border: 3px solid rgb(212, 92, 92);
+  border-radius: 20px;
+  color: rgb(212, 92, 92);
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/*success*/
+.success{
+  padding: 10px;
+  background-color: #a6fdc34d;
+  border: 3px solid rgb(92, 212, 166);
+  border-radius: 20px;
+  color: rgb(64, 185, 111);
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 600;
+}

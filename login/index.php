@@ -15,6 +15,7 @@ if (isset($_SESSION['user_id'])){
 	<title>SoundX Login</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../css/login-style.css" />
+		<link rel="stylesheet" href="../css/elements.css" />
 	</head>
 	
 	<body>
@@ -52,7 +53,7 @@ if (isset($_SESSION['user_id'])){
 							echo "<script>alert({$_SESSION['user_id']};)</script>";
 							header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/"); 
 						} else {
-							echo "<div>Input email or password is not correct.</div>";
+							echo "<div class='alert'>&#10069 &nbsp Input email or password is not correct.</div>";
 						}
 						$_POST = array();
 					}?>

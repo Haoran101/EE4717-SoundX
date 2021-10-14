@@ -9,6 +9,7 @@ session_start();
 	<title>SoundX Sign Up</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../css/login-style.css" />
+		<link rel="stylesheet" href="../css/elements.css" />
 	</head>
 	
 	<body>
@@ -33,12 +34,12 @@ session_start();
 								<label for="Contact"><b>Contact</b></label>
 								<input type="text" placeholder="Your Mobile No." name="contact" id="Contact" required>
 
-								<div id="invalidContactAlert"></div>
+								<div  id="invalidContactAlert"></div>
 								
 								<label for="Email"><b>Email</b></label>
 								<input type="email" placeholder="Your Email Adress" name="email" id="Email" required>
 
-								<div id="invalidEmailAlert"></div>
+								<div   id="invalidEmailAlert"></div>
 								
 								<label for="Password"><b>Password</b></label>
 								<input type="password" placeholder="Set Password." name="password" id="Password" required>
@@ -46,7 +47,7 @@ session_start();
 								<label for="ConfirmPassword"><b>Confirm Password</b></label>
 								<input type="password" placeholder="Confirm Password" name="confirmPassword" id="ConfirmPassword" required>
 
-								<div id="notSamePasswordAlert"></div>
+								<div   id="notSamePasswordAlert"></div>
 							</div>
 						</div>
 						<div>
@@ -58,12 +59,14 @@ session_start();
 		$result = $db -> query($try_select);
 		if ($result -> num_rows > 0){
 			//the email has already been registereed
+			echo '<div class="alert">';
 			echo "The email you entered is already registered!";
+			echo '</div>';
 		} else {
 			$insert_query = "INSERT INTO users (email, password, first_name, last_name, contact)";
 			$insert_query .= "VALUES('{$_POST['email']}', '{$_POST['password']}', '{$_POST['firstName']}', '{$_POST['lastName']}', '{$_POST['contact']}')";
 			$insert_res = $db -> query($insert_query);
-			echo "Sign up successfully! Redirecting to login in 3 seconds...";
+			echo "<div class='success'>Sign up successfully! Redirecting to login in 3 seconds...</div>";
 			header('Refresh: 3; url=../login/');
 		}
 }
