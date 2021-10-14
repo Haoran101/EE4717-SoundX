@@ -44,14 +44,16 @@
         </div>
         <div class="right-nav-column">
             <div id="user-info-text">
-            <button id="update-button" onclick="displayUpdateContent();">Update</button>
+                <button id="update-button" onclick="displayUpdateContent();">Update</button>
                 <form id="account-update" action="update_account_info.php" method="post">
                     <h2>Name</h2>
                     <p id="name-display">
                         <?php echo $name; ?>
                     </p>
-                    <input required type="text" hidden id="first-name-update" name="first_name" value="<?php echo $firstname;?>" onClick="this.select();" >
-                    <input required type="text" hidden id="last-name-update" name="last_name" value="<?php echo $lastname;?>" onClick="this.select();" >
+                    <input required type="text" hidden id="first-name-update" name="first_name"
+                        value="<?php echo $firstname;?>" onClick="this.select();">
+                    <input required type="text" hidden id="last-name-update" name="last_name"
+                        value="<?php echo $lastname;?>" onClick="this.select();">
                     <hr>
                     <h2>Email</h2>
                     <p id="email-display">
@@ -62,13 +64,12 @@
                     <p id="contact-display">
                         <?php echo $contact; ?>
                     </p>
-                    <input required type="text" hidden id="contact-update" name="contact" value="<?php echo $contact;?>" onClick="this.select();" >
+                    <input required type="text" hidden id="contact-update" name="contact" value="<?php echo $contact;?>"
+                        onClick="this.select();">
                     <div id="invalidContactAlert"></div>
                     <hr>
                     <input id="confirm-update-button" type='hidden' value='Update'>
                 </form>
-            </div>
-            <div>
                 <form action='logout.php'>
                     <input id="logout-button" type='submit' value='Log Out'>
                 </form>
