@@ -83,6 +83,18 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#empty_cart{
+    display: block;
+    margin:auto;
+}
+
+#empty_cart p{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 50px auto 150px auto;
+    color:rgb(63, 79, 95)
+}
+
 input[type=checkbox]:checked, input[type=checkbox]{
     cursor: pointer;
     width: 30px;

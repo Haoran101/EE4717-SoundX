@@ -19,7 +19,9 @@
     </div>
     <?php 
     if (count($_SESSION['cart'])==0){
-        echo "No Items In cart, Please keep shopping.";
+        echo '<div class = "cart-container">';
+        echo '<div id="empty_cart"><p>No Items In cart, Please keep shopping.</p></div>';
+        echo '</div>';
     } else {
         echo '<div class = "cart-container">';
         echo '<form action="../checkout/" method="post">';
