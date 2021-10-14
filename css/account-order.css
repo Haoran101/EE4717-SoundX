@@ -14,12 +14,11 @@ body{
 .left-nav-column , .left-nav-column-order{
     display: block;
     width:200px;
-    height:500px;
     padding-top: 50px;
     background-color: rgb(227, 235, 245);
 }
 
-.right-nav-column, .left-nav-column-order{
+.right-nav-column, .right-nav-column-order{
     display: block;
     width: 800px;
     height:500px;
@@ -27,7 +26,7 @@ body{
     background-color: rgb(241, 243, 245);
 }
 
-.main-content-order, .left-nav-column-order, .right-nav-column-order{
+.main-content-order, .right-nav-column-order{
     height: fit-content;
 }
 
@@ -99,22 +98,21 @@ input[type=submit] {
     font-weight: 500;
   }
 
+  #order-view-details{
+      margin-bottom: 100px;
+  }
+
+
   #order-view-details a{
-    width: 250px;
-    height: 50px;
-    float:right;
-    margin-top:30px;
-    background-color: #4CAF50;
-    color: white;
-    border:none;
-    border-radius: 8px;
-    padding: auto;
+    margin-top: 20px;
+    float: right;
+    color: rgb(0, 44, 95);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
   }
 
 #order-view-details a:hover {
-  background-color:ivory;
+  color:rgb(118, 144, 173);
 }
 
