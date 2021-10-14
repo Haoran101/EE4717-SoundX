@@ -60,6 +60,15 @@
         //no items selected in cart
         header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/");
     } else {
+        //the action is remove item from cart, instead of checkout
+        if ($_POST['remove'] === "true"){
+            foreach ($_POST['selected'] as $product){
+                if (($key = array_search($product, $_SESSION['cart'])) !== false) {
+                    unset($_SESSION['cart'][$key]);
+                }
+            }
+        header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/"); 
+        }
         $order_id = generate_random_order_id($db);
         $total = 0;
         $items = array();
