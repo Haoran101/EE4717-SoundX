@@ -26,13 +26,15 @@
 <head>
     <title>Checkout</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/check-out.css" />
+    <link rel="stylesheet" href="../css/elements.css" />
 </head>
 
 <body>
     <div class="order_details_form">
         <form name="checkout" action="create_order.php" method="post" class="form_content">
             <div class="order_details_left_col">
-                <h1>Delivery Information</h1>
+            <h1>Delivery Information</h1>
                 <div class="details_address">
                     <h2>Delivery Address</h2>
                     <input type="text" id="delivery_address_line_1" name="delivery_address_line_1"
@@ -42,7 +44,7 @@
                 </div>
                 <div class="details_code">
                     <h2>Postal Code</h2>
-                    <input type="text" id="zip_code" name="zip_code" required>
+                    <input type="text" id="zip_code" name="zip_code" style="margin-bottom: 40px;"required>
                 </div>
                 <div class="details_personal">
                     <h2>Name</h2>

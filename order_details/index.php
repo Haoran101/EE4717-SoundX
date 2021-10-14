@@ -52,7 +52,9 @@
     <h1>Order Details</h1>
         <!-- order items table -->
         <?php include 'item_in_order.php';
+        echo '<div class="index-order-detail-container">'
         order_item_table($order_id, $order_details, $order_items);
+        echo '</div>'
         ?>
             <tr><td><!-- delivery information row -->
                 Delivery Information<br>
