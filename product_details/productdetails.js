@@ -5,3 +5,11 @@ function switchImage(image_id){
     var big_image = document.getElementById("product_big_picture");
     big_image.src = source;
 }
+
+//Disable add to cart or buy now if no stock
+function noStock(){
+    var cartButton = document.getElementById('cart-button');
+    var buyNowButton = document.getElementById('buy-button');
+    cartButton.disabled = true;
+    buyNowButton.disabled = true;
+}

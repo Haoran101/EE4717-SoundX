@@ -10,7 +10,7 @@
         exit();
     }
 
-    $order_id = $_GET{'id'};
+    $order_id = (int)$_GET['id'];
     $order_details = get_order_details_by_order_id($db, $order_id);
     $order_items = get_order_items_with_product_info_by_order_id($db, $order_id);
 ?>
