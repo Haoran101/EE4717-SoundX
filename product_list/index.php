@@ -101,7 +101,6 @@
     $query = "SELECT * FROM products ";
     $constrant_set = array();
     $filters = $_GET;
-    echo $filters;
     if (isset($filters["min_price"])){
         if ($filters["min_price"] != ""){
             $constrant_set[] = " price >= {$filters["min_price"]} ";
@@ -135,7 +134,7 @@
     if (count($constrant_set) > 0){
         $query .= " WHERE ".implode(" and ", $constrant_set);
     }
-    var_dump($query);
+    //var_dump($query);
 
     $result_arr = get_product_list_by_query($db, $query);
 

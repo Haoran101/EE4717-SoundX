@@ -58,7 +58,7 @@ $brand = select_all_from_table($db, "brand");
 						<div class="item-block">
 							<a class="item-block-link"
 								href=<?php echo "../product_list/?{$types[0]}=true"; ?>>
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
+								<div class="item-img"><img src="../img/type/wired.jpg" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[0]; ?></div>
 							</a>
 						</div>
@@ -67,7 +67,7 @@ $brand = select_all_from_table($db, "brand");
 						<div class="item-block">
 							<a class="item-block-link"
 								href=<?php echo "../product_list/?{$types[1]}=true"; ?>>
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
+								<div class="item-img"><img src="../img/type/wireless.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[1]; ?></div>
 							</a>
 						</div>
@@ -76,7 +76,7 @@ $brand = select_all_from_table($db, "brand");
 						<div class="item-block">
 							<a class="item-block-link"
 								href=<?php echo "../product_list/?{$types[2]}=true"; ?>>
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
+								<div class="item-img"><img src="../img/type/game.jpg" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[2]; ?></div>
 							</a>
 						</div>
@@ -85,7 +85,7 @@ $brand = select_all_from_table($db, "brand");
 						<div class="item-block">
 							<a class="item-block-link"
 								href=<?php echo "../product_list/?{$types[3]}=true"; ?>>
-								<div class="item-img"><img src="../img/placeholder.png" alt="SoundX" width="130px"></div>
+								<div class="item-img"><img src="../img/type/sport.png" alt="SoundX" width="130px"></div>
 								<div class="font-item"><?php echo $types[3]; ?></div>
 							</a>
 						</div>

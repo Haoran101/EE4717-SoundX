@@ -21,6 +21,11 @@ function display(n) {
       slides[i].style.display = "none";
   }
   slides[pageNumber-1].style.display = "block";
+  if (pageNumber < slides.length){
+    pageNumber++;
+  } else {
+    pageNumber = 1;
+  }
 }
 
 

@@ -56,7 +56,7 @@ body {
 
   .item-img{
       display: block;
-      width: 130px;
+      max-width: 130px;
       display: block;
   }
   
@@ -148,8 +148,7 @@ body {
 }
 
 /* remove default p paddSing for contact */
-#contact p{
-  margin: auto 80px;
+#contact-text p{
   line-height: 1.8;
   font-size: 20px;
   font-weight: 500;

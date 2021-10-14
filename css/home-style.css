@@ -6,7 +6,8 @@ body {
 }
 
 .title{
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 50px;
 }
 
 /* product list*/
@@ -149,7 +150,7 @@ body {
 }
 
 
-/* Slideshow container */
+/* banner container */
 .top-banner-container{
   max-width: 90%;
   min-width:1300px;
@@ -173,7 +174,7 @@ body {
   padding: 16px;
   color: azure;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 40px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -193,13 +194,31 @@ body {
 /* Caption text */
 .caption-text {
   color:azure;
-  font-size: 15px;
-  padding: 8px 12px;
+  font-size: 25px;
+  padding: 16px 24px;
   position: absolute;
-  bottom: 8px;
+  bottom: 20px;
   width: 100%;
   text-align: center;
 }
+
+.transition {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
 
 /* heading 1 style */
 h1 {

@@ -56,6 +56,7 @@
                 </div>
             </div>
             <div class="order_details_right_col">
+                <h1>Order Details</h1>
                 <div class="order_summary">
                     <?php
     if (!isset($_POST['selected'])){
@@ -74,7 +75,6 @@
         $order_id = generate_random_order_id($db);
         $total = 0;
         $items = array();
-        echo '<h1>Order Details</h1>';
         echo '<div class="summary_table">';
         echo '<table>';
         echo '<tr><th style="width:200px;">Items</th><th style="width:40px;">Qty</th><th style="width:80px;">Price</th><th width:80px;>Subtotal</th></tr>';
@@ -89,15 +89,17 @@
             $price = $info['price'];
             echo "<td style='width=20%'>{$price}</td>";
             $subtotal = (float) $price * (float) $qty;
-            echo "<td>{$subtotal}</td>";
+            $subtotal_format = number_format($subtotal, 2);
+            echo "<td>{$subtotal_format}</td>";
             echo '</tr>';
             $total += $subtotal;
         }
         $_SESSION["order_id"] = $order_id;
         $_SESSION["order_item"] = $items;
+        $total_format = number_format($total, 2);
         echo '<tr>';
         echo '<td colspan="3" id="total_title">Total</td>';
-        echo "<td id='total_amount'>{$total}</td>";
+        echo "<td id='total_amount'>$  {$total_format}</td>";
         echo '</tr>';
         echo '</table>';
         echo '</div>';

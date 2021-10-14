@@ -1,7 +1,7 @@
 <!-- Contact -->
 <div id="contact">
 		<div id="contact-text">
-			<h2>Contact Us</h1>
+			<h2>Contact Us</h2>
 				<p>
 					<!-- (+65) 8888 - 8888 -->
 					&#40;&#43;65&#41; 8888 &#45; 8888 <br />
