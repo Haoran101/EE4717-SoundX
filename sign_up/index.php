@@ -2,12 +2,6 @@
 require_once '../db_conn.php';
 session_start();
 
-if (isset($_SESSION['user_id'])){
-	//If already login, jump to home page directly
-	header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/home/"); 
-	exit();
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +32,13 @@ if (isset($_SESSION['user_id'])){
 							<div>
 								<label for="Contact"><b>Contact</b></label>
 								<input type="text" placeholder="Your Mobile No." name="contact" id="Contact" required>
+
+								<div id="invalidContactAlert"></div>
 								
 								<label for="Email"><b>Email</b></label>
-								<input type="text" placeholder="Your Email Adress" name="email" id="Email" required>
+								<input type="email" placeholder="Your Email Adress" name="email" id="Email" required>
+
+								<div id="invalidEmailAlert"></div>
 								
 								<label for="Password"><b>Password</b></label>
 								<input type="password" placeholder="Set Password." name="password" id="Password" required>
@@ -52,7 +50,7 @@ if (isset($_SESSION['user_id'])){
 							</div>
 						</div>
 						<div>
-							<button type="submit" class="signup-button">Sign Up</button>
+							<button type="submit" id="signup-button" class="signup-button">Sign Up</button>
 <?php
 //first check whether the entered email is already in database
 	if (isset($_POST['email']) && isset($_POST['password'])){
