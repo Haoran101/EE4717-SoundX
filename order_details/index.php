@@ -52,9 +52,9 @@
     <h1>Order Details</h1>
         <!-- order items table -->
         <?php include 'item_in_order.php';
-        echo '<div class="index-order-detail-container">'
+        echo '<div class="index-order-detail-container">';
         order_item_table($order_id, $order_details, $order_items);
-        echo '</div>'
+        echo '</div>';
         ?>
             <tr><td><!-- delivery information row -->
                 Delivery Information<br>
@@ -65,7 +65,7 @@
                 echo "{$order_details['delivery_address_line_1']}<br>";
                 if (strlen($order_details['delivery_address_line_2'] > 0)){
                     //if delivery address line 2 is set
-                    echo "{$order_details['delivery_address_line_2']}        ";
+                    echo "{$order_details['delivery_address_line_2']}";
                 }
                 echo "{$order_details['zip_code']}<br>";
                 if ($order_details['track_number'] != NULL){
