@@ -21,7 +21,7 @@ body {
     display: block;
 	width: 250px;
     min-height: 250px;
-    margin: 0px 60px 100px 60px;
+    margin: 0px 90px 100px 90px;
 	
 }
 
@@ -41,9 +41,6 @@ body {
     display: block;
     width: 100%;
     text-decoration: none
-}
-
-.item-info-body{
 }
 
 .item-info-body-title{
@@ -67,8 +64,9 @@ body {
 }
 
 .topSale-banner-container{
-	min-height: 350px;	
-	max-width: 100%;
+    height: 500px;
+	min-height: 500px;	
+	width: 100%;
 	min-width: 1300px;
 	position: relative;
 	margin: auto;
@@ -78,9 +76,9 @@ body {
 	display: block;
     /*z-index: 0;*/
     width: 100%;
-	height: 350px;
+	height: 500px;
     min-width: 1300px;
-	background-image:url("../img/placeholder.png");
+	background-image:url("../img/banner/banner3_product6.jpg");
 	background-position: left;
 	background-repeat: no-repoeat;
 	background-size:cover;
@@ -106,7 +104,7 @@ body {
 	justify-content:center;
     background-color:#ffffff;
 	text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
 	margin:20px 0 0;
     background-clip: padding-box;
     border-radius: 8px;
@@ -117,8 +115,8 @@ body {
 
 .product-button-text{
     padding: 1px 2px;
-    color: #000200;
-	font-size: 18px;
+    color: #5f5f5f;
+	font-size: 24px;
     font-weight: 700;
 }
 
@@ -133,10 +131,13 @@ body {
 	margin: 0px 60px;
 }
 
+#type-item-img{
+    height: 250px;
+}
+
 .type-img{
 	display:block;
-	border-radius: 50%;
-	width: 180px;
+	border-radius: 10%;
 }
 
 .type-item-title{
