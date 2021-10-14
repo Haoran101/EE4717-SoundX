@@ -153,7 +153,7 @@
     <?php 
         if (isset($_GET['from_checkout'])){
             send_email($db, $order_id, $order_items, $order_details);
-            echo "<div>Congrats! Your order has been created successfully! An email has been sent to your mailbox!</div>";
+            echo "<div class='success'>Congrats! Your order has been created successfully! An email has been sent to your mailbox!</div>";
         }
     ?>
     <div class="content">

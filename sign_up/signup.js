@@ -13,9 +13,11 @@ function validateContactNumber(){
     let contact = contactField.value;
     let alert = document.getElementById("invalidContactAlert");
     if (contact.search(/^\d{8}$/) !== 0){
+        alert.className = "alert";
         alert.innerHTML = "A valid phone number contains 8 digits.";
         signUpButton.disabled = true;
     } else {
+        alert.className = "";
         alert.innerHTML ="";
         signUpButton.disabled = false;
     }
@@ -27,8 +29,10 @@ function validateEmail(){
     let alert = document.getElementById("invalidEmailAlert");
     if (/^[\w\.-]+@([\w]+\.){1,3}[\w]+$/.test(email)){
         alert.innerHTML ="";
+        alert.className = "";
         signUpButton.disabled = false;
     } else {
+        alert.className = "alert";
         alert.innerHTML = "Please Enter a valid email!";
         signUpButton.disabled = true;
     }
@@ -40,9 +44,11 @@ function confirmPassword(){
     let alert =  document.getElementById("notSamePasswordAlert");
     if (password.length > 0 && confirmedPassword.length > 0){
         if (confirmedPassword != password){
+            alert.className = "alert";
             alert.innerHTML = "Password inputs are not the same!";
             signUpButton.disabled = true;
         } else {
+            alert.className = "";
             alert.innerHTML = "";
             signUpButton.disabled = false;
         }

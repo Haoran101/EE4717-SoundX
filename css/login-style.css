@@ -51,13 +51,17 @@ body, html {
   transform: translateY(-50%);
   max-width: 400px;
   min-width: 200px;
-  height: 500px;
+  height: fit-content;
   padding: 24px;
   background-color: #ffffff;
 }
 
 .login-title, .signup-title{
 	text-align:center;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: Gotham,Verdana,sans-serif;
+  color:rgb(0, 44, 95);
 }
 
 .input-field{
@@ -65,7 +69,7 @@ body, html {
 }
 
 .login-button, .signup-button{
-  background-color: #04AA6D;
+  background-color: rgb(0, 44, 95);
   color: white;
   margin:20px 0;
   padding: 10px 20px;
@@ -79,7 +83,7 @@ body, html {
 }
 
 .login-button:hover, .signup-button:hover {
-  background-color: Ivory;
+  background-color: rgb(118, 144, 173);
 }
 
 input[type=text], input[type=password], input[type=email] {
@@ -104,6 +108,8 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
 	margin:0;
 	padding-top:0;
 	padding-bottom:10px;
+  font-size: 18px;
+  font-family: Gotham,Verdana,sans-serif;
 }
 
 #sign-up-request a:link{
@@ -111,7 +117,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
 }
 
 #sign-up-request a:hover{
-	color:Ivory;		
+	color:rgb(118, 144, 173);		
 }
 
 #name-input-row{
