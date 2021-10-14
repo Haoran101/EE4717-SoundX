@@ -29,24 +29,31 @@
 </head>
 
 <body>
-<div class="order_details_form">
-<form name="checkout" action="create_order.php" method="post">
-    <h2>Delivery Address</h2>
-    <input type="text" id="delivery_address_line_1" 
-        name = "delivery_address_line_1" placeholder="Address Line 1" required>
-    <input type="text" id="delivery_address_line_2" 
-        name = "delivery_address_line_2" placeholder="Address Line 2">
-    <h2>Postal Code</h2>
-    <input type="text" id="zip_code" name = "zip_code" required>
-    <h2>Name</h2>
-    <input type="text" id="receiver_name" name = "receiver_name" required>
-    <h2>Contact No.</h2>
-    <input type="tel" id="receiver_contact" name = "receiver_contact" required>
-    <h2>Payment Method</h2>
-    <input type="radio" id="payment_visa" name = "payment_method" value="visa">
-    <input type="radio" id="payment_mastercard" name = "payment_method" value="mastercard">
-    <input type="radio" id="payment_paypal" name = "payment_method" value="paypal">
-    <?php
+    <div class="order_details_form">
+        <form name="checkout" action="create_order.php" method="post" class="form_content">
+            <div class="order_details_left_col">
+                <h1>Delivery Information</h1>
+                <div class="details_address">
+                    <h2>Delivery Address</h2>
+                    <input type="text" id="delivery_address_line_1" name="delivery_address_line_1"
+                        placeholder="Address Line 1" required>
+                    <input type="text" id="delivery_address_line_2" name="delivery_address_line_2"
+                        placeholder="Address Line 2">
+                </div>
+                <div class="details_code">
+                    <h2>Postal Code</h2>
+                    <input type="text" id="zip_code" name="zip_code" required>
+                </div>
+                <div class="details_personal">
+                    <h2>Name</h2>
+                    <input type="text" id="receiver_name" name="receiver_name" required>
+                    <h2>Contact No.</h2>
+                    <input type="tel" id="receiver_contact" name="receiver_contact" required>
+                </div>
+            </div>
+            <div class="order_details_right_col">
+                <div class="order_summary">
+                    <?php
     if (!isset($_POST['selected'])){
         //no items selected in cart
         header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/cart/");
@@ -54,10 +61,10 @@
         $order_id = generate_random_order_id($db);
         $total = 0;
         $items = array();
-        echo '<div class="order_confirmation">';
-        echo '<h2>Order Details</h2>';
+        echo '<h1>Order Details</h1>';
+        echo '<div class="summary_table">';
         echo '<table>';
-        echo '<tr><th>Items</th><th>Qty</th><th>Price</th><th>Subtotal</th></tr>';
+        echo '<tr><th style="width:200px;">Items</th><th style="width:40px;">Qty</th><th style="width:80px;">Price</th><th width:80px;>Subtotal</th></tr>';
         foreach($_POST['selected'] as $selected_product){
             echo '<tr>';
             $qty = $_POST['items'][$selected_product];
@@ -76,16 +83,37 @@
         $_SESSION["order_id"] = $order_id;
         $_SESSION["order_item"] = $items;
         echo '<tr>';
-        echo '<td colspan="2" id="order-total-amount">Total</td>';
-        echo "<td id='order-total-amount-num'>{$total}</td>";
+        echo '<td colspan="3" id="total_title">Total</td>';
+        echo "<td id='total_amount'>{$total}</td>";
         echo '</tr>';
         echo '</table>';
         echo '</div>';
     }
 ?>
-    <input type="submit" value="Place Order">
-</form>
-<div>
+                </div>
+                <div class="payment">
+                    <h1>Payment Method</h1>
+                    <div class="payment_button">
+                        <label>
+                            <input type="radio" id="payment_visa" name="payment_method" value="visa">
+                            <img src="../img/placeholder.png">
+                        </label>
+                        <label>
+                            <input type="radio" id="payment_mastercard" name="payment_method" value="mastercard">
+                            <img src="../img/placeholder.png">
+                        </label>
+                        <label>
+                            <input type="radio" id="payment_paypal" name="payment_method" value="paypal">
+                            <img src="../img/placeholder.png">
+                        </label>
+                    </div>
+                </div>
+                <div id="submit_button">
+                    <input type="submit" value="Place Order">
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
