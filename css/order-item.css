@@ -40,14 +40,14 @@
 }
 
 #img-container{
-    width: 250px;
+    width: 50px;
     display: flex;
     justify-content: center;
 }
 
 #order-img{
     display: block;
-    height: 100px;
+    height: 50px;
     width: fit-content;
     overflow: hidden;
 }
@@ -64,7 +64,7 @@
     line-height: 1.5;
     font-family: Gotham,Verdana,sans-serif;
     font-style: normal;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 800;
 }
 
