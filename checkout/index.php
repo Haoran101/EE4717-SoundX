@@ -3,7 +3,6 @@
     include_once '../db_conn.php';
     include_once '../query_utils.php';
 
-    var_dump($_POST);
     if (!isset($_SESSION['user_id'])){
         //If already login, jump to home page directly
         header("Location: http://192.168.56.2/f32ee/EE4717-SoundX/login/"); 
