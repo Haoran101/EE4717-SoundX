@@ -1,184 +1,189 @@
- .filter-result-container{
-    display:flex;
-    justify-content: center;
-    padding: 40px 0px 40px 80px;
-    min-width: 1300px;
-}
+ .filter-result-container {
+     display: flex;
+     justify-content: center;
+     padding: 40px 0px 40px 80px;
+     min-width: 1300px;
+ }
 
 
-.filters-container{
-    display: block;
-    padding: 40px 80px;
-}
+ .filters-container {
+     display: block;
+     padding: 40px 80px;
+ }
 
 
-.brand-filters, .type-filters, .price-filter{
-    display:flex;
-    justify-content: flex-start;
-    flex-grow: 1;
-    min-width: 1300px;
-    align-items: center;
-}
+ .brand-filters,
+ .type-filters,
+ .price-filter {
+     display: flex;
+     justify-content: flex-start;
+     flex-grow: 1;
+     min-width: 1300px;
+     align-items: center;
+ }
 
-.filter-title, .product-result-title{
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    width: 120px;
-    left:0;
-}
+ .filter-title,
+ .product-result-title {
+     font-size: 28px;
+     font-weight: 700;
+     letter-spacing: 2px;
+     width: 120px;
+     left: 0;
+ }
 
-.product-result-title{
-    display: block;
-    margin: 120px 0 40px 80px;
+ .product-result-title {
+     display: block;
+     margin: 120px 0 40px 80px;
 
-}
-
-
-.filter-checkbox-list, .filter-price-range{
-    display: block;
-    position:relative;
-    margin: auto;
-    margin-left: 40px;
-}
-
-.checkbox-item{
-    display: inline-block;
-    position:relative;
-    margin: auto;
-    margin-right:20px;
-    margin-left:0px;
-    width:120px;
-}
-
-#filter-separation{
-    margin:10px 40px 40px 0;
-    background-color:slategray;
-    height: 0.6px;
-    border-width:0;
-}
-
-input[type=checkbox]:checked, input[type=checkbox]{
-    cursor: pointer;
-    width: 20px;
-    height: 20px; 
-    margin-right:10px;
-    vertical-align: middle;
-}
-
-input[type=checkbox]{
-    background-color:darkgrey;
-}
-
-input[type=checkbox]:checked {
-    background-color:#1E80EF;
-}
-
-input[type=text] {
-    padding: 12px 20px;
-    margin: 5px 0;
-    display: inline-block;
-    border: 1.2px solid;
-    border-radius: 3px;
-    border-color: darkgrey;
-    height:15px;
-    width: 80px;
-    vertical-align: middle;
-    color:grey;
-}
-
-input:focus{
-    background-color: #ddd;
-}
-  
-input[type=submit] {
-    width: 250px;
-    height: 50px;
-    float:right;
-    margin-top:30px;
-    background-color: rgb(0, 44, 95);
-    color: white;
-    border:none;
-    border-radius: 8px;
-    padding: auto;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  
-input[type=submit]:hover {
-    background-color: rgb(118, 144, 173);
-  }
-
-label{
-    font-size: 18px;
-    font-weight: 200;
-    bottom:5px;
-    vertical-align: middle;
-}
+ }
 
 
+ .filter-checkbox-list,
+ .filter-price-range {
+     display: block;
+     position: relative;
+     margin: auto;
+     margin-left: 40px;
+ }
 
-/*display product*/
+ .checkbox-item {
+     display: inline-block;
+     position: relative;
+     margin: auto;
+     margin-right: 20px;
+     margin-left: 0px;
+     width: 120px;
+ }
 
-.product-result{
-    display:grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 80px;
-    grid-row-gap: 100px;
-}
-.product-card {
-   	width: 250px;
-    height: auto;
-    display: block;
-}
+ #filter-separation {
+     margin: 10px 40px 40px 0;
+     background-color: slategray;
+     height: 0.6px;
+     border-width: 0;
+ }
 
-.product-small-pic {
-    padding-top: 30px;
-    display: block;
-    height:150px;
-    width:fit-content;
-    overflow:hidden;    
-    margin: auto;
-}
+ input[type=checkbox]:checked,
+ input[type=checkbox] {
+     cursor: pointer;
+     width: 20px;
+     height: 20px;
+     margin-right: 10px;
+     vertical-align: middle;
+ }
 
-.product-list-info{
-    display: block;
-    padding: 10px 0 5px;
-	margin: 0px;
-	font-family: Gotham,Verdana,sans-serif;
-    font-style: normal;
-	font-size: 15px;
-    line-height: 15px;
-	font-weight: 800;
-}
+ input[type=checkbox] {
+     background-color: darkgrey;
+ }
 
-.product-list-info-title{
-	padding: 30px 0 0 0;
-	margin: 0px;
-    height: 40px;
-	font-family: Gotham,Verdana,sans-serif;
-    font-style: normal;
-	font-size: 14px;
-	font-weight: 800;
-}
+ input[type=checkbox]:checked {
+     background-color: #1E80EF;
+ }
 
-p {
-    margin:0;
-}
+ input[type=text] {
+     padding: 12px 20px;
+     margin: 5px 0;
+     display: inline-block;
+     border: 1.2px solid;
+     border-radius: 3px;
+     border-color: darkgrey;
+     height: 15px;
+     width: 80px;
+     vertical-align: middle;
+     color: grey;
+ }
 
-.product-list-info-price{
-    padding: 5px 0;
-	margin: 0px;
-	font-family: Gotham,Verdana,sans-serif;
-    font-style: normal;
-	font-size: 15px;
-    line-height: 15px;
-	font-weight: 400;
-}
+ input:focus {
+     background-color: #ddd;
+ }
 
-.product-card-link {
-    text-decoration: none;
-    color: black;
-}
+ input[type=submit] {
+     width: 250px;
+     height: 50px;
+     float: right;
+     margin-top: 30px;
+     background-color: rgb(0, 44, 95);
+     color: white;
+     border: none;
+     border-radius: 8px;
+     padding: auto;
+     cursor: pointer;
+     font-size: 20px;
+     font-weight: 500;
+ }
 
+ input[type=submit]:hover {
+     background-color: rgb(118, 144, 173);
+ }
+
+ label {
+     font-size: 18px;
+     font-weight: 200;
+     bottom: 5px;
+     vertical-align: middle;
+ }
+
+
+
+ /*display product*/
+
+ .product-result {
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     grid-column-gap: 80px;
+     grid-row-gap: 100px;
+ }
+
+ .product-card {
+     width: 250px;
+     height: auto;
+     display: block;
+ }
+
+ .product-small-pic {
+     padding-top: 30px;
+     display: block;
+     height: 150px;
+     width: fit-content;
+     overflow: hidden;
+     margin: auto;
+ }
+
+ .product-list-info {
+     display: block;
+     padding: 10px 0 5px;
+     margin: 0px;
+     font-family: Gotham, Verdana, sans-serif;
+     font-style: normal;
+     font-size: 15px;
+     line-height: 15px;
+     font-weight: 800;
+ }
+
+ .product-list-info-title {
+     padding: 30px 0 0 0;
+     margin: 0px;
+     height: 40px;
+     font-family: Gotham, Verdana, sans-serif;
+     font-style: normal;
+     font-size: 14px;
+     font-weight: 800;
+ }
+
+ p {
+     margin: 0;
+ }
+
+ .product-list-info-price {
+     padding: 5px 0;
+     margin: 0px;
+     font-family: Gotham, Verdana, sans-serif;
+     font-style: normal;
+     font-size: 15px;
+     line-height: 15px;
+     font-weight: 400;
+ }
+
+ .product-card-link {
+     text-decoration: none;
+     color: black;
+ }
