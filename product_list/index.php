@@ -88,10 +88,10 @@
                         <label for="max_price">To</label>
                         <input type="text" name="max_price" onClick="this.select();" id="max_price" size="2" value="1000"
                             onchange="validateNumberInput(this);">
-                    <div class="alert"><p id="alert-msg"></p></div>
                     </div>
+                    <div  id="alert-msg" style="margin-right: 400px;"></div>
                 </div>
-                <input type="submit" value="Apply Filters">
+                <input id="filter-button" type="submit" value="Apply Filters">
             </form>
         </div>
     </div>

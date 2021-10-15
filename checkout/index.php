@@ -123,7 +123,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="alert" id="noPaymentAlert"></div>
+                <div id="noPaymentAlert" style="margin-bottom: 30px"></div>
                 <div id="submit_button">
                     <input id="checkout-button" type="submit" value="Place Order">
                 </div>
