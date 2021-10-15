@@ -4,6 +4,11 @@ body {
   min-width: 1300px;
 }
 
+.maint-content{
+  display: block;
+  min-width: 1300px;
+}
+
 .product-show{
   display: flex;
   flex-grow: 1;
@@ -155,4 +160,15 @@ td{
 
 hr{
   margin-bottom: 30px;
+}
+
+input[type="button"]{
+  background-color: rgb(165, 174, 184);
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
 }

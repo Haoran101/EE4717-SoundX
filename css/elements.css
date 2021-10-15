@@ -177,3 +177,24 @@ body {
   text-align: left;
   font-weight: 600;
 }
+
+#return_button{
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin-top:50px;
+  margin-bottom: 10px;
+  background-color: rgb(165, 174, 184);
+  border:none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 00;
+  text-align: center;
+  padding-top:5px;
+}
+
+#return_button a{
+  color: white;
+  text-decoration: none;
+}
