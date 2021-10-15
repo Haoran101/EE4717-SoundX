@@ -91,7 +91,7 @@
                     </div>
                     <div  id="alert-msg" style="margin-right: 400px;"></div>
                 </div>
-                <input type="submit" value="Apply Filters">
+                <input id="filter-button" type="submit" value="Apply Filters">
             </form>
         </div>
     </div>

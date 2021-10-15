@@ -8,7 +8,7 @@ function validateNumberInput(new_input){
     if (isdecimal !== 0){
         document.getElementById("alert-msg").innerHTML = "Not a valid number input, please try again! ";
         document.getElementById("alert-msg").className = "alert";
-        return;
+        new_input.value = (new_input.id == "min_price")? 0: 1000;
     } else {
         document.getElementById("alert-msg").innerHTML = "";
         document.getElementById("alert-msg").className = "";
