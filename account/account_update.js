@@ -6,6 +6,7 @@ function displayUpdateContent(){
     document.getElementById("contact-display").hidden = true;
     document.getElementById("contact-update").hidden = false;
     document.getElementById("confirm-update-button").type = "submit";
+    document.getElementById("confirm-update-button").value = "Save";
     document.getElementById("logout-button").type = "hidden";
 }
 

@@ -33,7 +33,7 @@ function validateEmail(){
         signUpButton.disabled = false;
     } else {
         alert.className = "alert";
-        alert.innerHTML = "Please Enter a valid email!";
+        alert.innerHTML = "Please enter a valid email.";
         signUpButton.disabled = true;
     }
 }
@@ -45,7 +45,7 @@ function confirmPassword(){
     if (password.length > 0 && confirmedPassword.length > 0){
         if (confirmedPassword != password){
             alert.className = "alert";
-            alert.innerHTML = "Password inputs are not the same!";
+            alert.innerHTML = "Password input is not matched. Please try again.";
             signUpButton.disabled = true;
         } else {
             alert.className = "";

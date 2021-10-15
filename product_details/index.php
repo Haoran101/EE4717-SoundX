@@ -18,50 +18,58 @@ $added_in_cart = in_array($product_id, $_SESSION['cart']);
 <body>
     <!-- navigation bar -->
     <?php include '../Elements/nav_bar.php';?>
-    <div class="product-show">
-        <div class="image-and-selector">
-            <div class="main-img">
-                <img src=<?php echo"../img/product/{$product_id}-1.jpg";?> id="product_big_picture" />
-            </div>
-            <div class="image-selector-small">
-                <?php $num_of_pictures = (int) $row["no_pictures"];
+    <div class="main_content">
+        <div id="return_button" style="margin-left:150px">
+            <form>
+                <input type="button" value="Back" onclick="history.back()">
+            </form>
+            <!--<a href="../orders/index.php">Back</a>-->
+        </div>
+        <div class="product-show">
+            <div class="image-and-selector">
+                <div class="main-img">
+                    <img src=<?php echo"../img/product/{$product_id}-1.jpg";?> id="product_big_picture" />
+                </div>
+                <div class="image-selector-small">
+                    <?php $num_of_pictures = (int) $row["no_pictures"];
             for ($pic = 1; $pic <= $num_of_pictures; $pic++){
                 $pic_source = "../img/product/".$product_id."-".$pic.".jpg";
                 echo '<div class="image-selector-small-item">';
                 echo '<img class="pic-thumbnail" src='.$pic_source.' id="product_pic_'.$pic.'" width="60px" height="60px" onclick="switchImage(\'product_pic_'.$pic.'\');"/></div>';
             }?>
+                </div>
             </div>
-        </div>
-        <div class="text-title-part">
-            <h1><?php echo $row["product_name"]; ?></h1>
-            <h2><?php echo $row["short_description"]; ?></h2>
-            <p class="price"><strong>$<?php echo $row["price"]; ?></strong></p>
-            <p class="stock">Stock Left: <?php echo $row["stock"]; ?></p>
-            <div class="button-group">
-                <div id="add-to-cart-button">
-                    <form action="add_to_cart.php" method="post">
-                        <input type="text" hidden name="product_id" value="<?php echo $product_id; ?>">
-                        <button id="cart-button" onclick="this.form.submit();">
-                            <?php
+            <div class="text-title-part">
+                <h1><?php echo $row["product_name"]; ?></h1>
+                <h2><?php echo $row["short_description"]; ?></h2>
+                <p class="price"><strong>$<?php echo $row["price"]; ?></strong></p>
+                <p class="stock">Stock Left: <?php echo $row["stock"]; ?></p>
+                <div class="button-group">
+                    <div id="add-to-cart-button">
+                        <form action="add_to_cart.php" method="post">
+                            <input type="text" hidden name="product_id" value="<?php echo $product_id; ?>">
+                            <button id="cart-button" onclick="this.form.submit();">
+                                <?php
                     if ($added_in_cart){
                         echo "View In Cart";
                     } else {echo "Add to Cart";}
                 ?>
-                        </button>
-                    </form>
-                </div>
-                <div id="buy-now-button">
-                <form id="buyNow" action="../checkout/index.php" method="post">
-                    <input type="hidden" id="buy-now-select-this" name="selected[]" value="<?php echo $product_id; ?>">
-                    <input type="hidden" id="buy-now-qty-one" name="items[<?php echo $product_id; ?>]" value="1">
-                    <button id="buy-button" onclick="buyNow.submit();">Buy Now</button>
-                </form>
+                            </button>
+                        </form>
+                    </div>
+                    <div id="buy-now-button">
+                        <form id="buyNow" action="../checkout/index.php" method="post">
+                            <input type="hidden" id="buy-now-select-this" name="selected[]"
+                                value="<?php echo $product_id; ?>">
+                            <input type="hidden" id="buy-now-qty-one" name="items[<?php echo $product_id; ?>]"
+                                value="1">
+                            <button id="buy-button" onclick="buyNow.submit();">Buy Now</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-
 
     <div class="product-detail-info">
         <div class="detail-info-container">

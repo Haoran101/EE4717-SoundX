@@ -36,7 +36,6 @@
     <link rel="stylesheet" href="../css/elements.css" />
     <link rel="stylesheet" href="../css/order-details.css" />
     <style>
-
         .index-order-detail-container {
             display: block;
             min-width: 1300px;
@@ -169,6 +168,9 @@
         }
     ?>
     <div class="content">
+        <div id="return_button">
+            <a href="../orders/index.php">Back</a>
+        </div>
         <div class="status-bar-container">
             <?php
         $curr_status = (int) $order_details['status'];
@@ -198,9 +200,9 @@
         ?>
         </div>
         <div class="delivery-info-container">
-                    <!-- delivery information row -->
-                    <h1>Delivery Information</h1>
-                    <?php
+            <!-- delivery information row -->
+            <h1>Delivery Information</h1>
+            <?php
                 echo "<div class='delivery-info'><div id='personal'><p class='title'>Name</p><p>{$order_details['receiver_name']}</p>";
                 echo "<p class='title'>Contact No. </p><p>{$order_details['receiver_contact']}</p></div>";
                 echo "<div id='address'><p class='title'>Address</p>";

@@ -138,3 +138,10 @@ input[type=text]{
     border: none;
     background: #ffffff;
   }
+
+  #empty_order p{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 50px auto 100px auto;
+    color:rgb(63, 79, 95);
+  }

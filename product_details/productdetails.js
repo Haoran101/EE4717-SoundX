@@ -11,5 +11,7 @@ function noStock(){
     var cartButton = document.getElementById('cart-button');
     var buyNowButton = document.getElementById('buy-button');
     cartButton.disabled = true;
+    cartButton.style.backgroundColor = "grey";
     buyNowButton.disabled = true;
+    buyNowButton.style.backgroundColor = "grey";
 }
