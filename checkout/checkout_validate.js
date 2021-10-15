@@ -32,3 +32,28 @@ function validateZipCode(){
         checkoutButton.disabled = false;
     }
 }
+
+
+checkPaymentMethodSelected();
+let radios = document.forms["checkout"].elements["payment_method"];
+for (var radio of radios){
+    radio.addEventListener("change", checkPaymentMethodSelected);
+}
+
+
+function checkPaymentMethodSelected(){
+    let radios = document.forms["checkout"].elements["payment_method"];
+    let selectedPayment = false
+    for (var radio of radios){
+        selectedPayment ||= radio.checked;
+    }
+    let alert = document.getElementById("noPaymentAlert");
+    if (selectedPayment){
+        alert.className = "";
+        alert.innerHTML= "";
+    } else {
+        alert.className = "alert";
+        alert.innerHTML = "Please Select Payment Method.";
+    }
+}
+
