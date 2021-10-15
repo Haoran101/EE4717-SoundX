@@ -29,7 +29,10 @@ session_start();
 									<label for="LastName"><b>Last Name</b></label>
 									<input type="text" placeholder="Last Name" name="lastName" id="LastName" required>
 								</div>
+
 							</div>
+
+							<div   id="invalidNameAlert"></div>
 							<div>
 								<label for="Contact"><b>Contact</b></label>
 								<input type="text" placeholder="Your Mobile No." name="contact" id="Contact" required>

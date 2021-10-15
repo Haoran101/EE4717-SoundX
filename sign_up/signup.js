@@ -3,11 +3,29 @@ var passwordField = document.getElementById('Password');
 var confirmPasswordField = document.getElementById('ConfirmPassword');
 var contactField = document.getElementById("Contact");
 var emailField = document.getElementById("Email");
+var firstNameField = document.getElementById("FirstName");
+var lastNameField = document.getElementById("LastName");
 
+firstNameField.addEventListener("change", validateName);
+lastNameField.addEventListener("change", validateName);
 passwordField.addEventListener("change", confirmPassword);
 confirmPasswordField.addEventListener("change", confirmPassword);
 contactField.addEventListener("change", validateContactNumber);
 emailField.addEventListener("change", validateEmail);
+
+function validateName(e){
+    let name = e.currentTarget.value;
+    let alert = document.getElementById("invalidNameAlert");
+    if (name.search(/^[a-zA-Z\s-]+$/) !== 0){
+        alert.className = "alert";
+        alert.innerHTML = "Name should only contain letters, space or -";
+        signUpButton.disabled = true;
+    } else {
+        alert.className = "";
+        alert.innerHTML ="";
+        signUpButton.disabled = false;
+    }
+}
 
 function validateContactNumber(){
     let contact = contactField.value;
