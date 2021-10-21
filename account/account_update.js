@@ -18,9 +18,11 @@ function validateContactNumber(){
     let contact = contactField.value;
     let alert = document.getElementById("invalidContactAlert");
     if (contact.search(/^\d{8}$/) !== 0){
+        alert.className = "alert";
         alert.innerHTML = "A valid phone number contains 8 digits.";
         confirmButton.disabled = true;
     } else {
+        alert.className = "";
         alert.innerHTML ="";
         confirmButton.disabled = false;
     }
