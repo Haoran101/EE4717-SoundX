@@ -142,7 +142,7 @@
 	
 	//if no result is available
     if (empty($result_arr)){
-        echo '<div style="display: flex; justify-content: center;"><img src="../img/no_result.png" style="width:500px;"></div>';
+        echo '<div id="no_result" style="display: flex; justify-content: center;"><img src="../img/no_result.png" style="width:500px;"></div>';
     }
         
     //echo '<div><img src="../img/no_result.png" style="margin: 50px auto 0; width: 100%; height=auto;"></div>';
