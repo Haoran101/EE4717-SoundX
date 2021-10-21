@@ -8,6 +8,13 @@ function validateNumberInput(new_input){
     if (isdecimal !== 0){
         document.getElementById("alert-msg").innerHTML = "Not a valid number input, please try again! ";
         document.getElementById("alert-msg").className = "alert";
+
+        var img=document.createElement('img');
+        img.src="../img/no_result.png";
+        img.style="margin: 50px auto 0; width: 100%; height=auto;";
+        var div=doucment.getElementById("no_result");
+        div.appendChild(img);
+        
         new_input.value = (new_input.id == "min_price")? 0: 1000;
     } else {
         document.getElementById("alert-msg").innerHTML = "";
