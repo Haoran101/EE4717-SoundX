@@ -63,7 +63,8 @@ session_start();
 		if ($result -> num_rows > 0){
 			//the email has already been registereed
 			echo '<div class="alert">';
-			echo "The email you entered is already registered!";
+			echo "The email you entered is already registered! ";
+			echo '<a href="../login">Login here</a>';
 			echo '</div>';
 		} else {
 			$insert_query = "INSERT INTO users (email, password, first_name, last_name, contact)";
