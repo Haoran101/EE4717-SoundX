@@ -95,9 +95,11 @@
             </form>
         </div>
     </div>
+    <script src="product_list.js"></script>
     <?php
     include_once '../db_conn.php';
     include_once '../query_utils.php';
+    
     $query = "SELECT * FROM products ";
     $constrant_set = array();
     $filters = $_GET;
@@ -167,12 +169,8 @@
             echo '</div></div></a>';
         }
         echo '</div></div>';
-
     }
-       
-    ?>
-    <script src="product_list.js"></script>
-    <?php include '../Elements/footer.php';?>
+    include '../Elements/footer.php';?>
 </body>
 
 </html>
