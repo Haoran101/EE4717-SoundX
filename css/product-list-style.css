@@ -2,14 +2,15 @@
      display: flex;
      justify-content: left;
      padding: 40px 0px;
-     min-width: 1100px;
+     min-width: 1150px;
+    
  }
 
 
  .filters-container {
      display: block;
      padding: 40px 80px;
-     min-width: 1000px;
+     min-width: 1150px;
  }
 
 
@@ -18,8 +19,8 @@
  .price-filter {
      display: flex;
      justify-content: flex-start;
-     min-width: 1000px;
-     width: 1000px;
+     min-width: 1150px;
+     width: 1150px;
      align-items: center;
  }
 
@@ -132,6 +133,7 @@
      grid-template-columns: auto auto auto auto;
      grid-column-gap: 145px;
      grid-row-gap: 100px;
+     margin: auto;
  }
 
  .product-card {
