@@ -23,7 +23,6 @@ $added_in_cart = in_array($product_id, $_SESSION['cart']);
             <form>
                 <input type="button" value="Back" onclick="history.back()">
             </form>
-            <!--<a href="../orders/index.php">Back</a>-->
         </div>
         <div class="product-show">
             <div class="image-and-selector">

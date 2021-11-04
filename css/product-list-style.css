@@ -1,14 +1,15 @@
  .filter-result-container {
      display: flex;
-     justify-content: center;
-     padding: 40px 0px 40px 80px;
-     min-width: 1300px;
+     justify-content: left;
+     padding: 40px 0px;
+     min-width: 1100px;
  }
 
 
  .filters-container {
      display: block;
      padding: 40px 80px;
+     min-width: 1000px;
  }
 
 
@@ -17,8 +18,8 @@
  .price-filter {
      display: flex;
      justify-content: flex-start;
-     flex-grow: 1;
-     min-width: 1300px;
+     min-width: 1000px;
+     width: 1000px;
      align-items: center;
  }
 
@@ -129,7 +130,7 @@
  .product-result {
      display: grid;
      grid-template-columns: auto auto auto auto;
-     grid-column-gap: 80px;
+     grid-column-gap: 145px;
      grid-row-gap: 100px;
  }
 
