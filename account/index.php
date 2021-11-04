@@ -66,6 +66,7 @@
                     </p>
                     <input required type="text" hidden id="contact-update" name="contact" value="<?php echo $contact;?>"
                         onClick="this.select();">
+                    <div class="alert" id="invalidContactAlert"></div>
                     <hr>
                     <input id="confirm-update-button" type='hidden' value='Update'>
                 </form>
