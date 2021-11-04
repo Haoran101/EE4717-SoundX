@@ -68,6 +68,7 @@
                         onClick="this.select();">
                     <div class="alert" id="invalidContactAlert"></div>
                     <hr>
+                    <div id="invalidContactAlert"></div>
                     <input id="confirm-update-button" type='hidden' value='Update'>
                 </form>
                 <form action='logout.php'>
