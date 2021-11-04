@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id'])){
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<title>SoundX Login</title>
+	<title>SoundX - Login</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../css/login-style.css" />
 		<link rel="stylesheet" href="../css/elements.css" />

@@ -31,7 +31,7 @@
 <html lang="en">
 
 <head>
-    <title>SoundX</title>
+    <title>Order details</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/elements.css" />
     <link rel="stylesheet" href="../css/order-details.css" />

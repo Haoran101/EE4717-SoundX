@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SoundX Sign Up</title>
+	<title>SoundX - Sign Up</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../css/login-style.css" />
 		<link rel="stylesheet" href="../css/elements.css" />

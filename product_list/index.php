@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Details</title>
+    <title>Products</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/product-list-style.css"/>
     <link rel="stylesheet" href="../css/elements.css" />
