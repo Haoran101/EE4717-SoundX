@@ -20,7 +20,7 @@ function order_item_table($order_id, $order_details, $order_items){
     $total = 0;
     foreach($order_items as $item){
         echo "<tr class='item-row'>";
-        echo "<td id='img-container'><img src='../img/product-snapshot/{$item['product_id']}.png' id='order-img'></td>";//image
+        echo "<td id='img-container'><a href='../product_details/?product_id={$item['product_id']}'><img src='../img/product-snapshot/{$item['product_id']}.png' id='order-img'></a></td>";//image
         echo "<td id='product-name-container'><p>{$item['product_name']}</p></td>";//product name
         echo "<td id='qty-container'><p>{$item['qty']}</p></td>";//Qty
         $price =  sprintf('%0.2f', $item['price']);

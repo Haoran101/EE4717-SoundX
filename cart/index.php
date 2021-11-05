@@ -34,7 +34,8 @@
             echo '<div class="cart-row">';
             echo "<input type='checkbox' name='selected[]' value='{$product}' id='cart-checkbox'>";
             echo "<div class='cart-img-container'>";
-            echo "<img src='../img/product-snapshot/{$product}.png' id='cart-img'></div>";
+            echo "<a href='../product_details/?product_id=$product'>";
+            echo "<img src='../img/product-snapshot/{$product}.png' id='cart-img'></a></div>";
             echo '<div id="product_name_quan">';
             echo '<p>'.$info['product_name'].'</p>';
             echo '<div id="quan_field">';
