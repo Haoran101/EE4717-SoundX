@@ -20,7 +20,7 @@ body, html {
 .signup-bg{
 	  display:flex;
 	  justify-content:center;
-	  
+    background-image: url("../img/signup-bg.png");	  
 }
 
 .signup-container{
