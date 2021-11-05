@@ -131,7 +131,7 @@
  .product-result {
      display: grid;
      grid-template-columns: auto auto auto auto;
-     grid-column-gap: 145px;
+     grid-column-gap: 110px;
      grid-row-gap: 100px;
      margin: auto;
  }
