@@ -6,7 +6,7 @@ body, html {
 }
 
 .login-bg,.signup-bg {
-  background-image: url("../img/login-bg.jpg");
+  background-image: url("../img/login-bg-blue-small.png");
   height:100%;
   max-width:100%;
   min-width: 400px;
@@ -44,12 +44,13 @@ body, html {
   margin-right: 80px;
   margin-left: 80px;
   top:50%;
+  border-radius: 20px;
   transform: translateY(-50%);
   max-width: 400px;
   min-width: 200px;
   height: fit-content;
   padding: 24px;
-  background-color: #ffffff;
+  background-color: #ffffff90;
 }
 
 .login-title, .signup-title{
